@@ -39,9 +39,9 @@ const Color deactivateButtonColor = Color(0xffFE0000);
 const Color activateButtonColor = Color(0xFF02AD11);
 
 // Main Application Color
-const Color mainBackground = Color(0xFFF3EFEF);
-const Color mainGoldColor = Color(0xFFEBBE25);
-const Color mainBrownColor = Color(0xFF221400);
+const Color mainBackground = Color(0xFFE1DADA);
+const Color mainGoldColor = Color(0xFFEDC242);
+const Color mainBrownColor = Color(0xFF001022);
 
 //Button text color
 const Color buttonTextColor = Colors.white;

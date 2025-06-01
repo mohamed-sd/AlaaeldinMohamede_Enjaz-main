@@ -82,7 +82,7 @@ class _SliderWidgetState extends State<SliderWidget>
         if (state is SliderFetchSuccess && state.sliderlist.isNotEmpty) {
           bannersLength = state.sliderlist.length; // Update bannersLength
           return SizedBox(
-            height: 170,
+            height: 150,
             child: PageView.builder(
               itemCount: bannersLength,
               controller: _pageController,

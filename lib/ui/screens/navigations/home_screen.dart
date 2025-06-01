@@ -288,34 +288,41 @@ class HomeScreenState extends State<HomeScreen>
                   child: appbarTitleWidget()),
             ],
           ),
-
-          backgroundColor: mainColor,
-          foregroundColor: Colors.white,
+          backgroundColor: context.color.mainGold,
+          foregroundColor: Colors.black,
           // backgroundColor: const Color.fromARGB(0, 0, 0, 0),
           actions: appbarActionsWidget(),
         ),
-        backgroundColor: context.color.errorContainer,
+        backgroundColor: Colors.white,
         body: Column(
+
           children: [
+
             // InkWell(
             //   onTap: (){
             //     Navigator.pushNamed(context, Routes.welcome);
             //   },
             //   child: Icon(Icons.ac_unit),
             // ),
-            blogMarqueeWidget(),
+            // blogMarqueeWidget(),
+            // The Location Container
+            // Container(
+            //     color: context.color.mainGold,
+            //     padding: const EdgeInsetsDirectional.only(
+            //         start: sidePadding, end: sidePadding, bottom: 10, top: 0),
+            //     alignment: AlignmentDirectional.centerStart,
+            //     child: LocationWidget()),
+            SizedBox(height: 10,),
             Container(
-                color: mainColor,
-                padding: const EdgeInsetsDirectional.only(
-                    start: sidePadding, end: sidePadding, bottom: 10, top: 0),
-                alignment: AlignmentDirectional.centerStart,
-                child: LocationWidget()),
+              margin: EdgeInsets.symmetric(horizontal: 10),
+                child: SliderWidget()),
             Expanded(
               child: Container(
                 clipBehavior: Clip.antiAliasWithSaveLayer,
+                margin: EdgeInsets.only(top: 20),
                 padding: EdgeInsetsDirectional.only(top: 10, bottom: 80),
                 decoration: BoxDecoration(
-                    color: context.color.primaryColor,
+                    color: Color.fromARGB(255, 246, 246, 246),
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(40),
                       topRight: Radius.circular(40),
@@ -333,55 +340,6 @@ class HomeScreenState extends State<HomeScreen>
                     shrinkWrap: true,
                     controller: _scrollController,
                     children: [
-                      Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(30, 0, 20, 0),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(0, 15, 0, 5),
-                              child: Text(
-                                'أهلاً بك في إعلانات بريق!',
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w600,
-                                    fontFamily: 'IBMPlexArabic'
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 3, 0),
-                              child: Text(
-                                'حيث نفتح لك ولإعلاناتك وصولًا سريعًا إلى عالم التعدين،',
-                                textAlign: TextAlign.justify,
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w600,
-                                    fontFamily: 'IBMPlexArabic'
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 3, 0),
-                              child: Text(
-                                'لتصل رسائلك إلى المهتمين وتخلق فرصًا مشرقة.',
-                                textAlign: TextAlign.justify,
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w600,
-                                    fontFamily: 'IBMPlexArabic'
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(height: 10,),
-                      const SliderWidget(),
                       const CategoryWidgetHome(),
                     ],
                   ),
@@ -404,7 +362,7 @@ class HomeScreenState extends State<HomeScreen>
             Constant.appName,
             fontSize: context.font.large,
             fontWeight: FontWeight.bold,
-            color: Colors.white,
+            color: Colors.black,
           ),
           //UiUtils.getSvg(AppIcons.appbarLogo, height: 40, width: 40 ,fit: BoxFit.cover ),
         ]);
@@ -422,13 +380,13 @@ class HomeScreenState extends State<HomeScreen>
 
   List<Widget> appbarActionsWidget() {
     return [
-      appbarIconWidget(Icons.favorite_border, () {
-        UiUtils.checkUser(
-            onNotGuest: () {
-              Navigator.pushNamed(context, Routes.favoritesScreen);
-            },
-            context: context);
-      }),
+      // appbarIconWidget(Icons.favorite_border, () {
+      //   UiUtils.checkUser(
+      //       onNotGuest: () {
+      //         Navigator.pushNamed(context, Routes.favoritesScreen);
+      //       },
+      //       context: context);
+      // }),
       appbarIconWidget(Icons.search, () {
         Navigator.pushNamed(context, Routes.searchScreenRoute, arguments: {
           "autoFocus": true,
