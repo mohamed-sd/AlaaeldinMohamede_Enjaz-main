@@ -110,7 +110,7 @@ class SplashScreenState extends State<SplashScreen>
     {
       Future.delayed(const Duration(seconds: 1), () {
         if (mounted) {
-          Navigator.of(context).pushReplacementNamed(Routes.welcome);
+          Navigator.of(context).pushReplacementNamed(Routes.onboarding);
         }
       });
     } else if (HiveUtils.isUserAuthenticated())
