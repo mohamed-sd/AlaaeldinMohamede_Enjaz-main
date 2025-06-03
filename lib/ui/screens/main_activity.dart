@@ -344,12 +344,12 @@ class MainActivityState extends State<MainActivity>
                 children: pages,
               ),
               if (Constant.maintenanceMode != "1")
-                Positioned(
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  child: bottomBar(),
-                ),
+                // Positioned(
+                //   left: 0,
+                //   right: 0,
+                //   bottom: 0,
+                //   child: bottomBar(),
+                // ),
               if (Constant.maintenanceMode == "1") MaintenanceMode()
             ],
           ),

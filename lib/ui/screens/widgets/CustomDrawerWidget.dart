@@ -31,17 +31,17 @@ class CustomDrawerWidget extends StatelessWidget {
         child: Container(
           height: double.infinity,
           decoration: BoxDecoration(
-            color: Color.fromARGB(255, 74, 41, 14),
+            color: context.color.mainGold,
             borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(100),
+              bottomLeft: Radius.circular(50),
               bottomRight: Radius.circular(0),
-              topLeft: Radius.circular(100),
+              topLeft: Radius.circular(50),
               topRight: Radius.circular(0),
             ),
             shape: BoxShape.rectangle,
           ),
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(15, 30, 15, 30),
+            padding: EdgeInsetsDirectional.fromSTEB(10, 5, 10, 0),
             child: SingleChildScrollView(
               primary: false,
               child: Column(
@@ -57,267 +57,209 @@ class CustomDrawerWidget extends StatelessWidget {
                     child: Align(
                       alignment: AlignmentDirectional(1, 0),
                       child: Padding(
-                          padding:
-                              EdgeInsetsDirectional.fromSTEB(20, 30, 20, 0),
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 35, 0, 0),
                           child: Container(
                             width: 40,
                             height: 40,
-                            decoration: BoxDecoration(
-                                border: Border.all(
-                                    color: context.color.mainGold, width: 2),
-                                borderRadius: BorderRadius.circular(50)),
                             child: Icon(
                               Icons.close_rounded,
-                              color: context.color.mainGold,
+                              color: Colors.black,
                             ),
-                          )
-
-                          // Button(
-                          //   borderColor: context.color.mainGold,
-                          //   borderRadius: 20,
-                          //   borderWidth: 2,
-                          //   buttonSize: 40,
-                          //   icon: Icon(
-                          //     Icons.close_sharp,
-                          //     color: context.color.mainColor,
-                          //     size: 24,
-                          //   ),
-                          //   onPressed: () async {
-                          //
-                          //   },
-                          // ),
-                          ),
+                          )),
                     ),
                   ),
                   // user Image And User Name
-                  InkWell(
-                    splashColor: Colors.transparent,
-                    focusColor: Colors.transparent,
-                    hoverColor: Colors.transparent,
-                    highlightColor: Colors.transparent,
-                    onTap: () async {},
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            border: Border.all(
-                              color: context.color.mainGold,
-                              width: 1,
-                            ),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(
+                            color: context.color.mainBrown,
+                            width: 1,
                           ),
-                          child: Padding(
-                            padding: EdgeInsets.all(5),
+                        ),
+                        child: Padding(
+                            padding: EdgeInsets.all(0),
                             child: Container(
                               width: 70,
                               height: 70,
-                                clipBehavior: Clip.antiAlias,
+                              clipBehavior: Clip.antiAlias,
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadiusDirectional.circular(18)
+                                  borderRadius:
+                                      BorderRadiusDirectional.circular(18)),
+                              child: CircleAvatar(
+                                  radius: 0,
+                                  child: Image.asset('assets/profile.jpg',width: 70 , height: 100,)),
+                            )),
+                      ),
+                      SizedBox(width: 10,),
+                      Expanded(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Container(
+                              width: double.infinity,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Align(
+                                    alignment: AlignmentDirectional(-1, 0),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0, 0, 0, 0),
+                                      child: HiveUtils.isUserAuthenticated()
+                                          ? CustomText(
+                                              HiveUtils.getUserDetails().name ??
+                                                  '',
+                                              softWrap: true,
+                                              overflow: TextOverflow.ellipsis,
+                                              maxLines: 2,
+                                              fontSize: context.font.normal,
+                                              fontWeight: FontWeight.w700,
+                                            )
+                                          : Text(
+                                              "مجهول",
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.w800),
+                                            ),
+                                    ),
+                                  ),
+                                  Text('المدير الإبداعى',style: TextStyle(
+                                    fontWeight: FontWeight.w700
+                                  ),),
+                                  Align(
+                                    alignment: AlignmentDirectional(-1, 0),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0, 0, 0, 0),
+                                      child: HiveUtils.isUserAuthenticated()
+                                          ? CustomText(
+                                              HiveUtils.getUserDetails()
+                                                      .email ??
+                                                  '',
+                                              softWrap: true,
+                                              overflow: TextOverflow.ellipsis,
+                                              maxLines: 2,
+                                              fontSize: context.font.small,
+                                              fontWeight: FontWeight.w700,
+                                            )
+                                          : Text(
+                                              "مجهول",
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.w800),
+                                            ),
+                                    ),
+                                  ),
+                                ],
                               ),
-                                child: CircleAvatar(
-                                  radius: 18,
-                                child: Image.asset('assets/profile.jpg')
-                                ),
-                              )
-                          ),
+                            ),
+                          ],
                         ),
-                        Expanded(
-                          child: Column(
+                      ),
+                    ],
+                  ),
+
+                  //Space
+                  SizedBox(
+                    height: 15,
+                  ),
+
+                  // Fast Arrive Links
+                  Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      // Links :
+                      DrawerLinkTow(context, ' الاداء الشخصي للموظف ',
+                          Icons.person_2_sharp),
+                      DrawerLinkTow(context, 'من نحن', Icons.info_outline),
+                      DrawerLinkTow(
+                          context, ' العمليات والمعدات ', Icons.fire_truck_outlined),
+                      DrawerLinkTow(
+                          context, ' التحفيز والتنافسية ', Icons.slow_motion_video),
+                      DrawerLinkTow(context, ' تعزيز الولاء التنافسي ',
+                          Icons.smart_button),
+                      DrawerLinkTow(context, ' دعم الإبتكار ', Icons.lightbulb_outline_sharp),
+                    ],
+                  ),
+
+                  SizedBox(
+                    height: 100,
+                  ),
+                  Divider(
+                    color: Colors.black,
+                  ),
+
+                  // LogOut Buttom
+                  HiveUtils.isUserAuthenticated()
+                      ? InkWell(
+                          onTap: () {
+                            // logOutConfirmWidget();
+                          },
+                          child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
-                              Container(
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  color: context.color.mainGold,
-                                  borderRadius: BorderRadius.only(
-                                    bottomLeft: Radius.circular(20),
-                                    bottomRight: Radius.circular(0),
-                                    topLeft: Radius.circular(20),
-                                    topRight: Radius.circular(0),
-                                  ),
-                                ),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Align(
+                              Align(
+                                alignment: AlignmentDirectional(-1, 0),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 20, 0, 0),
+                                  child: InkWell(
+                                    onTap: () {},
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        color: context.color.mainGold,
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
                                       alignment: AlignmentDirectional(-1, 0),
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            5, 8, 5, 8),
-                                        child:
-                                        HiveUtils.isUserAuthenticated() ?
-                                        CustomText(
-                                          HiveUtils.getUserDetails().name ?? '',
-                                          softWrap: true,
-                                          overflow: TextOverflow.ellipsis,
-                                          maxLines: 2,
-                                          fontSize: context.font.large,
-                                          fontWeight: FontWeight.w700,
-                                        )
-                                        //  Text(
-                                        //    HiveUtils.getUserDetails().name ? '',
-                                        //   style: TextStyle(
-                                        //       fontWeight: FontWeight.w800),
-                                        // )
-                                            : Text(
-                                          "مجهول",
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.w800),
-                                        ) ,
+                                            10, 5, 10, 5),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(5, 0, 5, 0),
+                                              child: Icon(
+                                                Icons.logout,
+                                                color: Colors.black,
+                                                size: 20,
+                                              ),
+                                            ),
+                                            Align(
+                                              alignment:
+                                                  AlignmentDirectional(-1, 0),
+                                              child: Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(5, 8, 5, 8),
+                                                child: Text(
+                                                  'تسجيل خروج',
+                                                  style: TextStyle(
+                                                    color: Colors.black,
+                                                    fontSize: 16,
+                                                    letterSpacing: 0.0,
+                                                    fontWeight: FontWeight.w600,
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ),
-                                  ],
+                                  ),
                                 ),
                               ),
                             ],
                           ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  //Space
-                  SizedBox(
-                    height: 10,
-                  ),
-                  //The Email Place
-                  Column(mainAxisSize: MainAxisSize.max, children: [
-                    Container(
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(
-                          color: Colors.white,
-                          width: 1,
-                        ),
-                      ),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 8),
-                            child:
-                            HiveUtils.isUserAuthenticated() ?
-                            CustomText(
-                              HiveUtils.getUserDetails().email ?? '',
-                              softWrap: true,
-                              overflow: TextOverflow.ellipsis,
-                              maxLines: 2,
-                              color: Colors.white,
-                              fontSize: context.font.small,
-                            )
-                             : Text("سجل الدخول اولا",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w700)),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ]),
-                  // Fast Arrive Title
-                  DrawerTitle(context , 'الوصـــول السريع'),
-                  // Fast Arrive Links
-                  Column(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      // Links :
-                      DrawerLinkOne(context , 'الرئيســــــــــية'),
-                      InkWell(
-                        onTap: (){
-                          Navigator.pushNamed(context, Routes.mining_exchange);
-                        }
-                      , child: DrawerLinkOne(context , 'بورصة المعادن')),
-                      InkWell(
-                            onTap: (){
-                              Navigator.pushNamed(context, Routes.mony_exchange);
-                            },
-                          child: DrawerLinkOne(context , 'بورصة العملات')),
-                      DrawerLinkOne(context , 'اخبـــار التعدين'),
-                      DrawerLinkOne(context , 'إعلانات الجهات والشركات'),
-                    ],
-                  ),
-
-                  DrawerTitle(context , 'الأقســـام المميزة'),
-                  // Fast Arrive Links
-                  Column(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      // Links :
-                      DrawerLinkTow(context , 'استكشاف الباقات' , Icons.saved_search),
-                      DrawerLinkTow(context , 'من نحن' , Icons.person),
-                      DrawerLinkTow(context , 'الشروط والأحكام',Icons.privacy_tip),
-                      DrawerLinkTow(context , 'الافكار والمقترحات',Icons.lightbulb),
-                      DrawerLinkTow(context , 'الشكاوى والملاحظات',Icons.notifications),
-                      DrawerLinkTow(context , 'التواصل عبر الواتساب',Icons.message),
-                    ],
-                  ),
-
-                  // LogOut Buttom
-                  HiveUtils.isUserAuthenticated() ?
-                  InkWell(
-                    onTap: (){
-                      // logOutConfirmWidget();
-                    },
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Align(
-                          alignment: AlignmentDirectional(-1, 0),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                            child: InkWell(
-                              onTap: () {},
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  color: context.color.mainGold,
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                alignment: AlignmentDirectional(-1, 0),
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      10, 5, 10, 5),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            5, 0, 5, 0),
-                                        child: Icon(
-                                          Icons.logout,
-                                          color: Colors.black,
-                                          size: 20,
-                                        ),
-                                      ),
-                                      Align(
-                                        alignment: AlignmentDirectional(-1, 0),
-                                        child: Padding(
-                                          padding: EdgeInsetsDirectional.fromSTEB(
-                                              5, 8, 5, 8),
-                                          child: Text(
-                                            'تسجيل خروج',
-                                            style: TextStyle(
-                                              color: Colors.black,
-                                              fontSize: 16,
-                                              letterSpacing: 0.0,
-                                              fontWeight: FontWeight.w600,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ) : SizedBox()
+                        )
+                      : SizedBox()
                 ],
               ),
             ),
@@ -327,144 +269,44 @@ class CustomDrawerWidget extends StatelessWidget {
     );
   }
 
-  Padding DrawerLinkOne(BuildContext context , String title) {
-    return Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 0),
-                      child: InkWell(
-                        onTap: () async {},
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Icon(
-                              Icons.keyboard_double_arrow_left,
-                              color: context.color.mainGold,
-                              size: 24,
-                            ),
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 5, 0, 5),
-                              child: Text(
-                                title,
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 15,
-                                  letterSpacing: 0.0,
-                                ),
-                              ),
-                            ),
-                            Expanded(
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    5, 0, 5, 0),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Divider(
-                                      thickness: 1,
-                                      color: Colors.white,
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    );
-  }
-
-  Padding DrawerLinkTow(BuildContext context , String title , IconData icon) {
+  Padding DrawerLinkTow(BuildContext context, String title, IconData icon) {
     return // Generated code for this Container Widget...
-      Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-        child: InkWell(
-          onTap: () {
-          },
-          child: Container(
-            width: double.infinity,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              border: Border.all(
-                color: Colors.white,
-              ),
-            ),
-            child: Padding(
-              padding: EdgeInsets.all(3),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(5, 0, 5, 0),
-                    child: Icon(
-                      icon,
-                      color: context.color.mainGold,
-                      size: 20,
+        Padding(
+      padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+      child: InkWell(
+        onTap: () {},
+        child: Container(
+          width: double.infinity,
+          child: Padding(
+            padding: EdgeInsets.all(3),
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                  child: Icon(
+                    icon,
+                    color: Colors.black,
+                    size: 20,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(5, 0, 5, 0),
+                  child: Text(
+                    title,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 15,
+                      letterSpacing: 0.0,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
-                    child: Text(
-                      title,
-                      style:
-                      TextStyle(
-                        color: Colors.white,
-                        fontSize: 13,
-                        letterSpacing: 0.0,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),
-      )
-    ;
+      ),
+    );
   }
-
-  Padding DrawerTitle(BuildContext context , String title) {
-    return Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                  child: Container(
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      color: context.color.mainGold,
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
-                      child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Align(
-                              alignment: AlignmentDirectional(-1, 0),
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    5, 8, 5, 8),
-                                child: Text(
-                                  title,
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 16,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Icon(
-                              Icons.arrow_forward,
-                              color: Colors.black,
-                              size: 20,
-                            ),
-                          ]),
-                    ),
-                  ),
-                );
-  }
-
 }
-
-

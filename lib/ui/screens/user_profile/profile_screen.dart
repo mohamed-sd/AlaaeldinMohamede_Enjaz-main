@@ -645,9 +645,29 @@ class _ProfileScreenState extends State<ProfileScreen>
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(
-                    height: 80,
+                  SizedBox(height: 9,),
+                  Padding(
+                    padding: EdgeInsets.only(right: 20),
+                    child: InkWell(
+                      onTap: (){
+                        Navigator.pop(context);
+                      }
+                      ,child: Align(
+                        alignment: Alignment.topRight,
+                        child:
+                          InkWell(
+                              onTap: (){
+                                Navigator.pop(context);
+                              },
+                              child: Icon(Icons.arrow_back , color: Colors.white , size: 30 , weight: 20, )),
+
+                      ),
+                    ),
                   ),
+                  SizedBox(
+                    height: 65,
+                  ),
+
                   profileHeader(),
                   // الصورة والمعلومات
                   // Padding(
@@ -731,35 +751,38 @@ class _ProfileScreenState extends State<ProfileScreen>
                           title: " اعلاناتي ".translate(context),
                           svgImagePath: AppIcons.myAdsNav,
                           onTap: () {
-                            Navigator.pushNamed(context, Routes.homeItemsScreen);
+                            Navigator.pushNamed(
+                                context, Routes.homeItemsScreen);
                           },
                         ),
                       ],
-                      if (HiveUtils.isUserAuthenticated()) ...[
-                        customTile(
-                          context,
-                          title: " الدردشة ".translate(context),
-                          svgImagePath: AppIcons.message,
-                          onTap: () {
-                            Navigator.pushNamed(context, Routes.chatlist);
-                          },
-                        ),
-                      ],
-                      customTile(
-                        context,
-                        title: "myFeaturedAds".translate(context),
-                        svgImagePath: AppIcons.promoted,
-                        onTap: () async {
-                          APICallTrigger.trigger();
-                          UiUtils.checkUser(
-                              onNotGuest: () {
-                                Navigator.pushNamed(
-                                    context, Routes.myAdvertisment,
-                                    arguments: {});
-                              },
-                              context: context);
-                        },
-                      ),
+                      // if (HiveUtils.isUserAuthenticated()) ...[
+                      //   customTile(
+                      //     context,
+                      //     title: " الدردشة ".translate(context),
+                      //     svgImagePath: AppIcons.message,
+                      //     onTap: () {
+                      //       Navigator.pushNamed(context, Routes.chatlist);
+                      //     },
+                      //   ),
+                      // ],
+
+                      // customTile(
+                      //   context,
+                      //   title: "myFeaturedAds".translate(context),
+                      //   svgImagePath: AppIcons.promoted,
+                      //   onTap: () async {
+                      //     APICallTrigger.trigger();
+                      //     UiUtils.checkUser(
+                      //         onNotGuest: () {
+                      //           Navigator.pushNamed(
+                      //               context, Routes.myAdvertisment,
+                      //               arguments: {});
+                      //         },
+                      //         context: context);
+                      //   },
+                      // ),
+
                       customTile(
                         context,
                         title: "subscription".translate(context),
@@ -775,6 +798,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                               context: context);
                         },
                       ),
+
                       customTile(
                         context,
                         title: "transactionHistory".translate(context),
@@ -858,19 +882,19 @@ class _ProfileScreenState extends State<ProfileScreen>
                               context: context);
                         },
                       ),
-                      customTile(
-                        context,
-                        title: "favorites".translate(context),
-                        svgImagePath: AppIcons.favorites,
-                        onTap: () {
-                          UiUtils.checkUser(
-                              onNotGuest: () {
-                                Navigator.pushNamed(
-                                    context, Routes.favoritesScreen);
-                              },
-                              context: context);
-                        },
-                      ),
+                      // customTile(
+                      //   context,
+                      //   title: "favorites".translate(context),
+                      //   svgImagePath: AppIcons.favorites,
+                      //   onTap: () {
+                      //     UiUtils.checkUser(
+                      //         onNotGuest: () {
+                      //           Navigator.pushNamed(
+                      //               context, Routes.favoritesScreen);
+                      //         },
+                      //         context: context);
+                      //   },
+                      // ),
                       customTile(
                         context,
                         title: "faqsLbl".translate(context),
@@ -886,18 +910,18 @@ class _ProfileScreenState extends State<ProfileScreen>
                               context: context);
                         },
                       ),
-                      customTile(
-                        context,
-                        title: "shareApp".translate(context),
-                        svgImagePath: AppIcons.shareApp,
-                        onTap: shareApp,
-                      ),
-                      customTile(
-                        context,
-                        title: "rateUs".translate(context),
-                        svgImagePath: AppIcons.rateUs,
-                        onTap: rateUs,
-                      ),
+                      // customTile(
+                      //   context,
+                      //   title: "shareApp".translate(context),
+                      //   svgImagePath: AppIcons.shareApp,
+                      //   onTap: shareApp,
+                      // ),
+                      // customTile(
+                      //   context,
+                      //   title: "rateUs".translate(context),
+                      //   svgImagePath: AppIcons.rateUs,
+                      //   onTap: rateUs,
+                      // ),
                       customTile(
                         context,
                         title: "contactUs".translate(context),

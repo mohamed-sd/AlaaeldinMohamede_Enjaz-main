@@ -399,6 +399,9 @@ class HomeScreenState extends State<HomeScreen>
             },
             context: context);
       }),
+      appbarIconWidget(Icons.person_2_outlined, () {
+        Navigator.pushNamed(context, Routes.profileScreen );
+      }),
     ];
   }
 

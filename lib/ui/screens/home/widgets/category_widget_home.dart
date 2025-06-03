@@ -394,7 +394,7 @@ class _CategoryWidgetHomeState extends State<CategoryWidgetHome> {
                                                   child: UiUtils.imageType(
                                                     subcategory.url ?? '',
                                                     fit: BoxFit.cover,
-                                                    width: 50
+                                                    width: 25
                                                   ),
                                       ),
                                     ],
