@@ -282,7 +282,8 @@ class MainActivityState extends State<MainActivity>
   late List<Widget> pages = [
     HomeScreen(from: widget.from),
     HomeGuide(),
-    HomeNews(),
+    HomeGuide(),
+    // HomeNews(),
     // ChatListScreen(),
     // ItemsScreen(),
     const ProfileScreen(),
