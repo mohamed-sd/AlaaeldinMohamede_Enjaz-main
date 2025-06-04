@@ -106,8 +106,8 @@ class MainActivityState extends State<MainActivity>
 
   StreamSubscription<Uri>? _linkSubscription;
   Color mainColor = Color(0xff271301);
-  Color bottomNavigationIconColor = Color(0xffFCB917);
-  Color bottomNavigationSelectedIconColor = Colors.white;
+  Color bottomNavigationIconColor = Colors.white;
+  Color bottomNavigationSelectedIconColor = Color(0xFFEDC242);
   @override
   void initState() {
     super.initState();
@@ -116,7 +116,7 @@ class MainActivityState extends State<MainActivity>
       svgEdit.loadSVG(value);
       svgEdit.change("Path_11299-2",
           attribute: "fill",
-          value: svgEdit.flutterColorToHexColor(bottomNavigationIconColor)
+          value: svgEdit.flutterColorToHexColor(Color(0xFFEDC242))
           //value: svgEdit.flutterColorToHexColor(context.color.territoryColor)
           );
       svgLoaded = true;
@@ -267,7 +267,7 @@ class MainActivityState extends State<MainActivity>
     ErrorFilter.setContext(context);
     svgEdit.change("Path_11299-2",
         attribute: "fill",
-        value: svgEdit.flutterColorToHexColor(bottomNavigationIconColor)
+        value: svgEdit.flutterColorToHexColor(Color(0xFFEDC242))
         //value: svgEdit.flutterColorToHexColor(context.color.territoryColor)
         );
   }
@@ -344,12 +344,12 @@ class MainActivityState extends State<MainActivity>
                 children: pages,
               ),
               if (Constant.maintenanceMode != "1")
-                // Positioned(
-                //   left: 0,
-                //   right: 0,
-                //   bottom: 0,
-                //   child: bottomBar(),
-                // ),
+                Positioned(
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  child: bottomBar(),
+                ),
               if (Constant.maintenanceMode == "1") MaintenanceMode()
             ],
           ),
@@ -405,7 +405,7 @@ class MainActivityState extends State<MainActivity>
           // color: context.color.secondaryColor,
           decoration: BoxDecoration(
             borderRadius: borderRadius,
-            color: mainColor,
+            color: context.color.mainBrown,
             //color: context.color.secondaryColor,
             border: Border.all(
                 color: context.color.textLightColor.withValues(alpha: 0.18)),
@@ -417,9 +417,8 @@ class MainActivityState extends State<MainActivity>
                 buildBottomNavigationbarItem(0, AppIcons.home,
                     AppIcons.homeNavActive, "homeTab".translate(context)),
 
-
                 buildBottomNavigationbarItem(1, AppIcons.listViewIcon,
-                    AppIcons.listViewIcon, "الدليل الاجرائي"),
+                    AppIcons.listViewIcon, "إجراءات الشركة"),
 
                 BlocListener<FetchUserPackageLimitCubit,
                         FetchUserPackageLimitState>(
@@ -450,10 +449,25 @@ class MainActivityState extends State<MainActivity>
                               context: context);
                         },
                         child: SizedBox(
-                          width: 53,
-                          height: 58,
+                          width: 60,
+                          height: 60,
                           child: svgLoaded == false
-                              ? Container()
+                              ? Container(
+                            padding:  EdgeInsets.all(0),
+                                  decoration: BoxDecoration(
+                                    color: context.color.mainGold,
+                                    borderRadius: BorderRadius.circular(50),
+                                    border: Border.all(
+                                      color: context.color.mainGold,
+                                      width: 4
+                                    )
+                                  ),
+                                  child: Icon(
+                                    Icons.add,
+                                    color:context.color.mainBrown ,
+                                    size: 50,
+                                  ),
+                                )
                               : SvgPicture.string(
                                   svgEdit.toSVGString() ?? "",
                                 ),
@@ -463,8 +477,8 @@ class MainActivityState extends State<MainActivity>
                 // buildBottomNavigationbarItem(2, AppIcons.myAdsNav,
                 //     AppIcons.myAdsNavActive, "myAdsTab".translate(context)),
 
-                buildBottomNavigationbarItem(2, AppIcons.articles,
-                    AppIcons.articles, " نادي التعدين "),
+                buildBottomNavigationbarItem(
+                    2, AppIcons.articles, AppIcons.articles, " نادي التعدين "),
 
                 buildBottomNavigationbarItem(3, AppIcons.profileNav,
                     AppIcons.profileNavActive, "profileTab".translate(context))
@@ -565,7 +579,7 @@ class MainActivityState extends State<MainActivity>
             children: <Widget>[
               if (currentTab == index) ...{
                 UiUtils.getSvg(activeSvg,
-                    color: bottomNavigationSelectedIconColor),
+                    color: Color(0xFFEDC242)),
               } else ...{
                 UiUtils.getSvg(svgImage, color: bottomNavigationIconColor),
                 //UiUtils.getSvg(svgImage,color: context.color.textLightColor.withValues(alpha: 0.5)),
@@ -573,7 +587,7 @@ class MainActivityState extends State<MainActivity>
               CustomText(title,
                   textAlign: TextAlign.center,
                   color: currentTab == index
-                      ? bottomNavigationSelectedIconColor
+                      ? Color(0xFFEDC242)
                       : bottomNavigationIconColor
                   //color: currentTab == index ? context.color.textDefaultColor : context.color.textLightColor.withValues(alpha: 0.5)
                   ),
