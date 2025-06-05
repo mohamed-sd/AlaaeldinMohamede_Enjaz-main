@@ -282,7 +282,7 @@ class MainActivityState extends State<MainActivity>
   late List<Widget> pages = [
     HomeScreen(from: widget.from),
     HomeGuide(),
-    HomeGuide(),
+    HomeNews(),
     // HomeNews(),
     // ChatListScreen(),
     // ItemsScreen(),
@@ -479,7 +479,7 @@ class MainActivityState extends State<MainActivity>
                 //     AppIcons.myAdsNavActive, "myAdsTab".translate(context)),
 
                 buildBottomNavigationbarItem(
-                    2, AppIcons.articles, AppIcons.articles, " نادي التعدين "),
+                    2, AppIcons.articles, AppIcons.articles, "  مجتمع إنجاز "),
 
                 buildBottomNavigationbarItem(3, AppIcons.profileNav,
                     AppIcons.profileNavActive, "profileTab".translate(context))

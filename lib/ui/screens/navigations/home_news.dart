@@ -301,7 +301,7 @@ class HomeScreenState extends State<HomeNews>
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   0, 15, 0, 5),
                               child: Text(
-                                'أهلاً بك في اخبار بريق!',
+                                'أهلاً بك في اخبار إنجاز!',
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 20,
@@ -326,7 +326,7 @@ class HomeScreenState extends State<HomeNews>
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   0, 5, 3, 0),
                               child: Text(
-                                'لتكون علي خطوة واحدة عن عالم التعدين.',
+                                'لتكون علي خطوة واحدة عن عالم إنجاز.',
                                 textAlign: TextAlign.justify,
                                 style: TextStyle(
                                     color: Colors.black,
@@ -876,35 +876,85 @@ class HomeScreenState extends State<HomeNews>
     );
   }
 
-  Container title_card(String title , bool section) {
+  Container title_card(String title, bool section) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 13),
       width: double.infinity,
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+      height: 100,
+      padding: EdgeInsetsDirectional.fromSTEB(15, 0, 15, 0),
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage(AppIcons.categoryBg),
           fit: BoxFit.fill,
         ),
-        borderRadius: BorderRadius.circular(8),
+        boxShadow: [
+          BoxShadow(
+            blurRadius: 4,
+            color: Color(0x33000000),
+            offset: Offset(
+              0,
+              2,
+            ),
+          )
+        ],
+        borderRadius: BorderRadius.circular(25),
+        border: Border.all(
+          color: Colors.white,
+          width: 6,
+        ),
       ),
       child: Row(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Icon(
-            section ? Icons.keyboard_arrow_up : Icons.keyboard_arrow_down,
-            color: Colors.black,
-          ),
-          Expanded(
-            child: CustomText(
-              title,
-              // item.name ?? "",
-              textAlign: TextAlign.center,
-              fontWeight: FontWeight.w600,
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 5),
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  section ? Icons.keyboard_arrow_down : Icons.keyboard_arrow_up,
+                  color: Colors.black,
+                  weight: 8,
+                  size: 35,
+                ),
+              ],
             ),
           ),
-          Icon(
-            section ? Icons.keyboard_arrow_up : Icons.keyboard_arrow_down,
-            color: Colors.black,
+          Expanded(
+            flex: 3,
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                CustomText(
+                  title ?? "",
+                  fontSize: 18,
+                  textAlign: TextAlign.right,
+                  fontWeight: FontWeight.bold,
+                ),
+              ],
+            ),
+          ),
+          Column(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Align(
+                alignment: AlignmentDirectional(0, 1),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Image.asset(
+                    'assets/main.png',
+                    width: 90,
+                    height: 80,
+                    fit: BoxFit.fill,
+                  ),
+                ),
+              ),
+            ],
           ),
         ],
       ),
