@@ -91,6 +91,7 @@ class _GoldShimmerCardState extends State<GoldShimmerCard>
 
   Widget _buildCard(Widget image) {
     return Container(
+      margin: EdgeInsets.all(5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
       ),
@@ -113,8 +114,8 @@ class _GoldShimmerCardState extends State<GoldShimmerCard>
                   fontSize: context.font.smaller,
                 ),
                 textAlign: TextAlign.center,
-                maxLines: 3,
-                // overflow: TextOverflow.ellipsis,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
               ),
             ),
           ),

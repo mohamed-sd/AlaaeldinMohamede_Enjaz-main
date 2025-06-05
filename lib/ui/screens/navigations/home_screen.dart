@@ -293,7 +293,7 @@ class HomeScreenState extends State<HomeScreen>
           // backgroundColor: const Color.fromARGB(0, 0, 0, 0),
           actions: appbarActionsWidget(),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: context.color.mainBrown,
         body: Column(
 
           children: [
@@ -307,12 +307,12 @@ class HomeScreenState extends State<HomeScreen>
             // ),
             // blogMarqueeWidget(),
             // The Location Container
-            // Container(
-            //     color: context.color.mainGold,
-            //     padding: const EdgeInsetsDirectional.only(
-            //         start: sidePadding, end: sidePadding, bottom: 10, top: 0),
-            //     alignment: AlignmentDirectional.centerStart,
-            //     child: LocationWidget()),
+            Container(
+                // color: context.color.mainGold,
+                padding: const EdgeInsetsDirectional.only(
+                    start: sidePadding, end: sidePadding, bottom: 10, top: 0),
+                alignment: AlignmentDirectional.centerStart,
+                child: LocationWidget()),
             // SizedBox(height: 10,),
             // Container(
             //   margin: EdgeInsets.symmetric(horizontal: 10),

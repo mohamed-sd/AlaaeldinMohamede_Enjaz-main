@@ -258,16 +258,16 @@ class HomeScreenState extends State<HomeGuide>
           // backgroundColor: const Color.fromARGB(0, 0, 0, 0),
           actions: appbarActionsWidget(),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: context.color.mainBrown,
         body: Column(
           children: [
             blogMarqueeWidget(),
-            // Container(
-            //     color: mainColor,
-            //     padding: const EdgeInsetsDirectional.only(
-            //         start: sidePadding, end: sidePadding, bottom: 10, top: 0),
-            //     alignment: AlignmentDirectional.centerStart,
-            //     child: LocationWidget()),
+            Container(
+
+                padding: const EdgeInsetsDirectional.only(
+                    start: sidePadding, end: sidePadding, bottom: 10, top: 0),
+                alignment: AlignmentDirectional.centerStart,
+                child: LocationWidget()),
             // SizedBox(
             //   height: 10,
             // ),
@@ -282,8 +282,8 @@ class HomeScreenState extends State<HomeGuide>
                 decoration: BoxDecoration(
                     color: context.color.primaryColor,
                     borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(0),
-                      topRight: Radius.circular(0),
+                      topLeft: Radius.circular(40),
+                      topRight: Radius.circular(40),
                     )),
                 child: RefreshIndicator(
                   triggerMode: RefreshIndicatorTriggerMode.anywhere,

@@ -246,8 +246,8 @@ class HomeScreenState extends State<HomeNews>
             ],
           ),
 
-          backgroundColor: mainColor,
-          foregroundColor: Colors.white,
+          backgroundColor: context.color.mainBrown,
+          foregroundColor: context.color.mainGold,
           // backgroundColor: const Color.fromARGB(0, 0, 0, 0),
           actions: appbarActionsWidget(),
         ),
@@ -262,7 +262,7 @@ class HomeScreenState extends State<HomeNews>
             // ),
             blogMarqueeWidget(),
             Container(
-                color: mainColor,
+                color: context.color.mainBrown,
                 padding: const EdgeInsetsDirectional.only(
                     start: sidePadding, end: sidePadding, bottom: 10, top: 0),
                 alignment: AlignmentDirectional.centerStart,
@@ -817,7 +817,7 @@ class HomeScreenState extends State<HomeNews>
             );
           },
           child: Container(
-            color: marqueeBgColor,
+            color: context.color.mainBrown,
             padding: EdgeInsetsDirectional.symmetric(vertical: 5),
             child: MarqueeText(
               text: mergedTitle,
