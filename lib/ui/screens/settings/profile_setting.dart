@@ -100,7 +100,7 @@ Widget contentWidget(ProfileSettingFetchSuccess state, BuildContext context) {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CustomText("بريق",
+                CustomText("إنجاز",
                   textAlign: TextAlign.center,
                   fontWeight: FontWeight.w800,
                   fontSize: context.font.large,),
@@ -112,7 +112,7 @@ Widget contentWidget(ProfileSettingFetchSuccess state, BuildContext context) {
                   child: UiUtils.getSvg("assets/svg/Logo/placeholder.svg",fit: BoxFit.cover, width: 70 , height: 70 ),
                 ),
 
-                CustomText("Bareeq",
+                CustomText("Enjaz",
                   textAlign: TextAlign.center,
                   fontWeight: FontWeight.w800,
                   fontSize: context.font.large,),

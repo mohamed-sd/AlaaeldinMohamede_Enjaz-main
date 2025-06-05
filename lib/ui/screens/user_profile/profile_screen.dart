@@ -648,21 +648,21 @@ class _ProfileScreenState extends State<ProfileScreen>
                   SizedBox(height: 9,),
                   Padding(
                     padding: EdgeInsets.only(right: 20),
-                    child: InkWell(
-                      onTap: (){
-                        Navigator.pop(context);
-                      }
-                      ,child: Align(
-                        alignment: Alignment.topRight,
-                        child:
-                          InkWell(
-                              onTap: (){
-                                Navigator.pop(context);
-                              },
-                              child: Icon(Icons.arrow_back , color: Colors.white , size: 30 , weight: 20, )),
-
-                      ),
-                    ),
+                    // child: InkWell(
+                    //   onTap: (){
+                    //     Navigator.pop(context);
+                    //   }
+                    //   ,child: Align(
+                    //     alignment: Alignment.topRight,
+                    //     child:
+                    //       InkWell(
+                    //           onTap: (){
+                    //             Navigator.pop(context);
+                    //           },
+                    //           child: Icon(Icons.arrow_back , color: Colors.white , size: 30 , weight: 20, )),
+                    //
+                    //   ),
+                    // ),
                   ),
                   SizedBox(
                     height: 65,

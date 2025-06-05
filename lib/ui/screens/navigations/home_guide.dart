@@ -1449,13 +1449,13 @@ class HomeScreenState extends State<HomeGuide>
 
   List<Widget> appbarActionsWidget() {
     return [
-      // appbarIconWidget(Icons.favorite_border, () {
-      //   UiUtils.checkUser(
-      //       onNotGuest: () {
-      //         Navigator.pushNamed(context, Routes.favoritesScreen);
-      //       },
-      //       context: context);
-      // }),
+      appbarIconWidget(Icons.favorite_border, () {
+        UiUtils.checkUser(
+            onNotGuest: () {
+              Navigator.pushNamed(context, Routes.favoritesScreen);
+            },
+            context: context);
+      }),
       appbarIconWidget(Icons.search, () {
         Navigator.pushNamed(context, Routes.searchScreenRoute, arguments: {
           "autoFocus": true,
@@ -1468,9 +1468,9 @@ class HomeScreenState extends State<HomeGuide>
             },
             context: context);
       }),
-      appbarIconWidget(Icons.person_2_outlined, () {
-        Navigator.pushNamed(context, Routes.profileScreen);
-      }),
+      // appbarIconWidget(Icons.person_2_outlined, () {
+      //   Navigator.pushNamed(context, Routes.profileScreen);
+      // }),
     ];
   }
 
