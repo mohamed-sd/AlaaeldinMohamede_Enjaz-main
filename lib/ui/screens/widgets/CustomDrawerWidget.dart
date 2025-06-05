@@ -269,44 +269,49 @@ class CustomDrawerWidget extends StatelessWidget {
     );
   }
 
-  Padding DrawerLinkTow(BuildContext context, String title, IconData icon) {
+  InkWell DrawerLinkTow(BuildContext context, String title, IconData icon) {
     return // Generated code for this Container Widget...
-        Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-      child: InkWell(
-        onTap: () {},
-        child: Container(
-          width: double.infinity,
+        InkWell(
+          onTap: (){
+            Navigator.pushNamed(context, Routes.soon);
+          },
           child: Padding(
-            padding: EdgeInsets.all(3),
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                  child: Icon(
-                    icon,
-                    color: Colors.black,
-                    size: 20,
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(5, 0, 5, 0),
-                  child: Text(
-                    title,
-                    style: TextStyle(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                child: InkWell(
+          onTap: () {},
+          child: Container(
+            width: double.infinity,
+            child: Padding(
+              padding: EdgeInsets.all(3),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                    child: Icon(
+                      icon,
                       color: Colors.black,
-                      fontSize: 15,
-                      letterSpacing: 0.0,
-                      fontWeight: FontWeight.w600,
+                      size: 20,
                     ),
                   ),
-                ),
-              ],
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(5, 0, 5, 0),
+                    child: Text(
+                      title,
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 15,
+                        letterSpacing: 0.0,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
-        ),
-      ),
-    );
+                ),
+              ),
+        );
   }
 }

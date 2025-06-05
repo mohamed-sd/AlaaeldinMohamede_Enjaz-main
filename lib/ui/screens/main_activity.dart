@@ -372,7 +372,7 @@ class MainActivityState extends State<MainActivity>
       }
     }
     searchBody = {};
-    if (index == 1 || index == 2) {
+    if (index == 10 || index == 20) {
       UiUtils.checkUser(
           onNotGuest: () {
             currentTab = index;

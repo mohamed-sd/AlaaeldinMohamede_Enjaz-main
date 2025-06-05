@@ -261,22 +261,22 @@ class HomeScreenState extends State<HomeGuide>
         backgroundColor: Colors.white,
         body: Column(
           children: [
-            // blogMarqueeWidget(),
+            blogMarqueeWidget(),
             // Container(
             //     color: mainColor,
             //     padding: const EdgeInsetsDirectional.only(
             //         start: sidePadding, end: sidePadding, bottom: 10, top: 0),
             //     alignment: AlignmentDirectional.centerStart,
             //     child: LocationWidget()),
-            SizedBox(
-              height: 10,
-            ),
-            Container(
-                margin: EdgeInsets.symmetric(horizontal: 10),
-                child: SliderWidget()),
+            // SizedBox(
+            //   height: 10,
+            // ),
+            // Container(
+            //     margin: EdgeInsets.symmetric(horizontal: 10),
+            //     child: SliderWidget()),
             Expanded(
               child: Container(
-                margin: EdgeInsets.only(top: 20),
+                margin: EdgeInsets.only(top: 0),
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 padding: EdgeInsetsDirectional.only(top: 10, bottom: 80),
                 decoration: BoxDecoration(
@@ -301,6 +301,7 @@ class HomeScreenState extends State<HomeGuide>
                       SizedBox(
                         height: 10,
                       ),
+                      SliderWidget(),
                       // Container(
                       //     margin: EdgeInsets.symmetric(horizontal: 10),
                       //     child: const SliderWidget()),
@@ -1486,7 +1487,7 @@ class HomeScreenState extends State<HomeGuide>
             );
           },
           child: Container(
-            color: marqueeBgColor,
+            color: context.color.mainBrown,
             padding: EdgeInsetsDirectional.symmetric(vertical: 5),
             child: MarqueeText(
               text: mergedTitle,
@@ -1535,7 +1536,7 @@ class HomeScreenState extends State<HomeGuide>
                     fontSize: context.font.smaller,
                   ),
                   textAlign: TextAlign.center,
-                  maxLines: 2,
+                  maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),
               ),

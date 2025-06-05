@@ -297,7 +297,8 @@ class HomeScreenState extends State<HomeScreen>
         body: Column(
 
           children: [
-
+            blogMarqueeWidget(),
+            SizedBox(height: 10,),
             // InkWell(
             //   onTap: (){
             //     Navigator.pushNamed(context, Routes.welcome);
@@ -312,14 +313,14 @@ class HomeScreenState extends State<HomeScreen>
             //         start: sidePadding, end: sidePadding, bottom: 10, top: 0),
             //     alignment: AlignmentDirectional.centerStart,
             //     child: LocationWidget()),
-            SizedBox(height: 10,),
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 10),
-                child: SliderWidget()),
+            // SizedBox(height: 10,),
+            // Container(
+            //   margin: EdgeInsets.symmetric(horizontal: 10),
+            //     child: SliderWidget()),
             Expanded(
               child: Container(
                 clipBehavior: Clip.antiAliasWithSaveLayer,
-                margin: EdgeInsets.only(top: 20),
+                margin: EdgeInsets.only(top: 0),
                 padding: EdgeInsetsDirectional.only(top: 10, bottom: 80),
                 decoration: BoxDecoration(
                     color: Color.fromARGB(255, 246, 246, 246),
@@ -340,6 +341,7 @@ class HomeScreenState extends State<HomeScreen>
                     shrinkWrap: true,
                     controller: _scrollController,
                     children: [
+                      SliderWidget(),
                       const CategoryWidgetHome(),
                     ],
                   ),
@@ -418,7 +420,7 @@ class HomeScreenState extends State<HomeScreen>
                 );
               },
               child: Container(
-                color: marqueeBgColor,
+                color: context.color.mainBrown,
                 padding: EdgeInsetsDirectional.symmetric(vertical: 5),
                 child: MarqueeText(
                   text: mergedTitle,

@@ -756,32 +756,32 @@ class _ProfileScreenState extends State<ProfileScreen>
                           },
                         ),
                       ],
-                      // if (HiveUtils.isUserAuthenticated()) ...[
-                      //   customTile(
-                      //     context,
-                      //     title: " الدردشة ".translate(context),
-                      //     svgImagePath: AppIcons.message,
-                      //     onTap: () {
-                      //       Navigator.pushNamed(context, Routes.chatlist);
-                      //     },
-                      //   ),
-                      // ],
+                      if (HiveUtils.isUserAuthenticated()) ...[
+                        customTile(
+                          context,
+                          title: " الدردشة ".translate(context),
+                          svgImagePath: AppIcons.message,
+                          onTap: () {
+                            Navigator.pushNamed(context, Routes.chatlist);
+                          },
+                        ),
+                      ],
 
-                      // customTile(
-                      //   context,
-                      //   title: "myFeaturedAds".translate(context),
-                      //   svgImagePath: AppIcons.promoted,
-                      //   onTap: () async {
-                      //     APICallTrigger.trigger();
-                      //     UiUtils.checkUser(
-                      //         onNotGuest: () {
-                      //           Navigator.pushNamed(
-                      //               context, Routes.myAdvertisment,
-                      //               arguments: {});
-                      //         },
-                      //         context: context);
-                      //   },
-                      // ),
+                      customTile(
+                        context,
+                        title: "myFeaturedAds".translate(context),
+                        svgImagePath: AppIcons.promoted,
+                        onTap: () async {
+                          APICallTrigger.trigger();
+                          UiUtils.checkUser(
+                              onNotGuest: () {
+                                Navigator.pushNamed(
+                                    context, Routes.myAdvertisment,
+                                    arguments: {});
+                              },
+                              context: context);
+                        },
+                      ),
 
                       customTile(
                         context,
@@ -882,19 +882,19 @@ class _ProfileScreenState extends State<ProfileScreen>
                               context: context);
                         },
                       ),
-                      // customTile(
-                      //   context,
-                      //   title: "favorites".translate(context),
-                      //   svgImagePath: AppIcons.favorites,
-                      //   onTap: () {
-                      //     UiUtils.checkUser(
-                      //         onNotGuest: () {
-                      //           Navigator.pushNamed(
-                      //               context, Routes.favoritesScreen);
-                      //         },
-                      //         context: context);
-                      //   },
-                      // ),
+                      customTile(
+                        context,
+                        title: "favorites".translate(context),
+                        svgImagePath: AppIcons.favorites,
+                        onTap: () {
+                          UiUtils.checkUser(
+                              onNotGuest: () {
+                                Navigator.pushNamed(
+                                    context, Routes.favoritesScreen);
+                              },
+                              context: context);
+                        },
+                      ),
                       customTile(
                         context,
                         title: "faqsLbl".translate(context),
@@ -910,18 +910,18 @@ class _ProfileScreenState extends State<ProfileScreen>
                               context: context);
                         },
                       ),
-                      // customTile(
-                      //   context,
-                      //   title: "shareApp".translate(context),
-                      //   svgImagePath: AppIcons.shareApp,
-                      //   onTap: shareApp,
-                      // ),
-                      // customTile(
-                      //   context,
-                      //   title: "rateUs".translate(context),
-                      //   svgImagePath: AppIcons.rateUs,
-                      //   onTap: rateUs,
-                      // ),
+                      customTile(
+                        context,
+                        title: "shareApp".translate(context),
+                        svgImagePath: AppIcons.shareApp,
+                        onTap: shareApp,
+                      ),
+                      customTile(
+                        context,
+                        title: "rateUs".translate(context),
+                        svgImagePath: AppIcons.rateUs,
+                        onTap: rateUs,
+                      ),
                       customTile(
                         context,
                         title: "contactUs".translate(context),
