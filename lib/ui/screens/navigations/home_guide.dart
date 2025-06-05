@@ -219,8 +219,6 @@ class HomeScreenState extends State<HomeGuide>
   bool section11 = false;
   bool section12 = false;
 
-
-
   @override
   Widget build(BuildContext context) {
     super.build(context);
@@ -231,19 +229,19 @@ class HomeScreenState extends State<HomeGuide>
           elevation: 0,
           //leadingWidth: double.maxFinite,
           titleSpacing: 0,
-          title:
-          Row(
+          title: Row(
             children: [
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: InkWell(
-                    onTap: (){
+                    onTap: () {
                       showModalBottomSheet(
                           context: context,
                           isScrollControlled: true,
                           backgroundColor: Colors.transparent,
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.vertical(top: Radius.circular(25)),
+                            borderRadius:
+                                BorderRadius.vertical(top: Radius.circular(25)),
                           ),
                           builder: (context) => const CustomDrawerWidget());
                       // _openCustomSideSheet(context);
@@ -255,8 +253,8 @@ class HomeScreenState extends State<HomeGuide>
                   child: appbarTitleWidget()),
             ],
           ),
-          backgroundColor: context.color.mainGold,
-          foregroundColor: Colors.black,
+          backgroundColor: context.color.mainBrown,
+          foregroundColor: context.color.mainGold,
           // backgroundColor: const Color.fromARGB(0, 0, 0, 0),
           actions: appbarActionsWidget(),
         ),
@@ -270,7 +268,9 @@ class HomeScreenState extends State<HomeGuide>
             //         start: sidePadding, end: sidePadding, bottom: 10, top: 0),
             //     alignment: AlignmentDirectional.centerStart,
             //     child: LocationWidget()),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             Container(
                 margin: EdgeInsets.symmetric(horizontal: 10),
                 child: SliderWidget()),
@@ -323,12 +323,13 @@ class HomeScreenState extends State<HomeGuide>
                       InkWell(
                         onTap: () {
                           setState(() {
-                            if(section1)
+                            if (section1)
                               section1 = false;
-                            else section1 = true;
+                            else
+                              section1 = true;
                           });
                         },
-                        child: title_card(' إدارة الطلبات' , section1),
+                        child: title_card(' إدارة الطلبات', section1),
                       ),
                       SizedBox(
                         height: 5,
@@ -348,32 +349,32 @@ class HomeScreenState extends State<HomeGuide>
                                   // The Card
                                   InkWell(
                                     onTap: () {
-                                      Navigator.pushNamed(
-                                          context, Routes.soon);
+                                      Navigator.pushNamed(context, Routes.soon);
                                     },
-                                    child: GoldShimmerCard(
-                                        title: 'استقبال الطلبات من العمال ',
-                                        url:
+                                    child: custom_card_Item(
+                                        context,
+                                        'استقبال الطلبات من العمال ',
                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
                                   ),
                                   InkWell(
                                     onTap: () {
-                                      Navigator.pushNamed(
-                                          context, Routes.soon);
+                                      Navigator.pushNamed(context, Routes.soon);
                                     },
-                                    child: GoldShimmerCard(
-                                        title: 'التحقق من توفر المعدات المطلوبة',
-                                        url:
+                                    child: custom_card_Item(
+                                        context,
+                                        'التحقق من توفر المعدات المطلوبة',
                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
                                   ),
 
                                   InkWell(
                                     onTap: () {
-                                      Navigator.pushNamed(context, Routes.guide);
+                                      Navigator.pushNamed(
+                                          context, Routes.guide);
                                     },
-                                    child: GoldShimmerCard(
-                                        title: 'جدولة المعدات وتأكيد الطلب ',
-                                        url: 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                    child: custom_card_Item(
+                                        context,
+                                        'جدولة المعدات وتأكيد الطلب ',
+                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
                                   ),
                                 ],
                               ),
@@ -384,17 +385,17 @@ class HomeScreenState extends State<HomeGuide>
                         height: 5,
                       ),
 
-
                       //section 2
                       InkWell(
                         onTap: () {
                           setState(() {
-                            if(section2)
+                            if (section2)
                               section2 = false;
-                            else section2 = true;
+                            else
+                              section2 = true;
                           });
                         },
-                        child: title_card(' توقيع عقود الإيجار' , section2),
+                        child: title_card(' توقيع عقود الإيجار', section2),
                       ),
                       SizedBox(
                         height: 5,
@@ -412,7 +413,6 @@ class HomeScreenState extends State<HomeGuide>
                                 crossAxisSpacing: 8,
                                 children: [
                                   // The Card
-
 
                                   InkWell(
                                     onTap: () {
@@ -441,12 +441,6 @@ class HomeScreenState extends State<HomeGuide>
                                         'توقيع العقد مع العميل ',
                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
                                   ),
-
-
-
-
-
-
                                 ],
                               ),
                             ],
@@ -460,12 +454,13 @@ class HomeScreenState extends State<HomeGuide>
                       InkWell(
                         onTap: () {
                           setState(() {
-                            if(section3)
+                            if (section3)
                               section3 = false;
-                            else section3 = true;
+                            else
+                              section3 = true;
                           });
                         },
-                        child: title_card('  تجهيز المعدة وتسليمها' , section3),
+                        child: title_card('  تجهيز المعدة وتسليمها', section3),
                       ),
                       SizedBox(
                         height: 5,
@@ -485,13 +480,13 @@ class HomeScreenState extends State<HomeGuide>
                                   // The Card
                                   InkWell(
                                     onTap: () {
-                                      Navigator.pushNamed(
-                                          context, Routes.soon);
+                                      Navigator.pushNamed(context, Routes.soon);
                                     },
-                                    child: GoldShimmerCard(
-                                        title: ' فحص المعدات قبل التسليم ',
-                                        url:
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/pxyx3p1md655/14_copy.jpg'),
+                                    child: custom_card_Item(
+                                      context,
+                                        ' فحص المعدات قبل التسليم ',
+
+                                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/pxyx3p1md655/14_copy.jpg'),
                                   ),
                                   InkWell(
                                     onTap: () {
@@ -524,12 +519,14 @@ class HomeScreenState extends State<HomeGuide>
                       InkWell(
                         onTap: () {
                           setState(() {
-                            if(section4)
+                            if (section4)
                               section4 = false;
-                            else section4 = true;
+                            else
+                              section4 = true;
                           });
                         },
-                        child: title_card('  تشغيل المعدات في الموقع' , section4),
+                        child:
+                            title_card('  تشغيل المعدات في الموقع', section4),
                       ),
                       SizedBox(
                         height: 5,
@@ -588,12 +585,13 @@ class HomeScreenState extends State<HomeGuide>
                       InkWell(
                         onTap: () {
                           setState(() {
-                            if(section5)
+                            if (section5)
                               section5 = false;
-                            else section5 = true;
+                            else
+                              section5 = true;
                           });
                         },
-                        child: title_card('صيانة المعدات' , section5),
+                        child: title_card('صيانة المعدات', section5),
                       ),
                       SizedBox(
                         height: 5,
@@ -653,12 +651,13 @@ class HomeScreenState extends State<HomeGuide>
                       InkWell(
                         onTap: () {
                           setState(() {
-                            if(section6)
+                            if (section6)
                               section6 = false;
-                            else section6 = true;
+                            else
+                              section6 = true;
                           });
                         },
-                        child: title_card('توفير قطع الغيار' , section6),
+                        child: title_card('توفير قطع الغيار', section6),
                       ),
                       SizedBox(
                         height: 5,
@@ -729,12 +728,13 @@ class HomeScreenState extends State<HomeGuide>
                       InkWell(
                         onTap: () {
                           setState(() {
-                            if(section7)
+                            if (section7)
                               section7 = false;
-                            else section7 = true;
+                            else
+                              section7 = true;
                           });
                         },
-                        child: title_card('  النقل والترحيل' , section7),
+                        child: title_card('  النقل والترحيل', section7),
                       ),
                       SizedBox(
                         height: 5,
@@ -806,12 +806,13 @@ class HomeScreenState extends State<HomeGuide>
                       InkWell(
                         onTap: () {
                           setState(() {
-                            if(section8)
+                            if (section8)
                               section8 = false;
-                            else section8 = true;
+                            else
+                              section8 = true;
                           });
                         },
-                        child: title_card('  آليات التحصيل المالي' , section8),
+                        child: title_card('  آليات التحصيل المالي', section8),
                       ),
                       SizedBox(
                         height: 5,
@@ -877,19 +878,18 @@ class HomeScreenState extends State<HomeGuide>
                         height: 5,
                       ),
 
-
                       //section 9
-
 
                       InkWell(
                         onTap: () {
                           setState(() {
-                            if(section9)
+                            if (section9)
                               section9 = false;
-                            else section9 = true;
+                            else
+                              section9 = true;
                           });
                         },
-                        child: title_card('  إدارة القوى البشرية' , section9),
+                        child: title_card('  إدارة القوى البشرية', section9),
                       ),
                       SizedBox(
                         height: 5,
@@ -985,18 +985,19 @@ class HomeScreenState extends State<HomeGuide>
                         height: 5,
                       ),
 
-                    //secation 10
-
+                      //secation 10
 
                       InkWell(
                         onTap: () {
                           setState(() {
-                            if(section10)
+                            if (section10)
                               section10 = false;
-                            else section10 = true;
+                            else
+                              section10 = true;
                           });
                         },
-                        child: title_card(' إدارة العمليات الميدانية' , section10),
+                        child:
+                            title_card(' إدارة العمليات الميدانية', section10),
                       ),
                       SizedBox(
                         height: 5,
@@ -1023,7 +1024,6 @@ class HomeScreenState extends State<HomeGuide>
                                         '   إصدار الفواتير ',
                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
                                   ),
-
 
                                   InkWell(
                                     onTap: () {
@@ -1075,7 +1075,6 @@ class HomeScreenState extends State<HomeGuide>
                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
                                   ),
 
-
                                   InkWell(
                                     onTap: () {
                                       Navigator.pushNamed(context, Routes.soon);
@@ -1094,19 +1093,18 @@ class HomeScreenState extends State<HomeGuide>
                         height: 5,
                       ),
 
-
                       //secation 11
-
 
                       InkWell(
                         onTap: () {
                           setState(() {
-                            if(section11)
+                            if (section11)
                               section11 = false;
-                            else section11 = true;
+                            else
+                              section11 = true;
                           });
                         },
-                        child: title_card(' إدارة علاقات العملاء' , section11),
+                        child: title_card(' إدارة علاقات العملاء', section11),
                       ),
                       SizedBox(
                         height: 5,
@@ -1202,19 +1200,19 @@ class HomeScreenState extends State<HomeGuide>
                         height: 5,
                       ),
 
-
-
-                     // section 12
+                      // section 12
 
                       InkWell(
                         onTap: () {
                           setState(() {
-                            if(section12)
+                            if (section12)
                               section12 = false;
-                            else section12 = true;
+                            else
+                              section12 = true;
                           });
                         },
-                        child: title_card('   إدارة المشتروات التشغيلية' , section12),
+                        child: title_card(
+                            '   إدارة المشتروات التشغيلية', section12),
                       ),
                       SizedBox(
                         height: 5,
@@ -1321,7 +1319,6 @@ class HomeScreenState extends State<HomeGuide>
                                         ' إعداد طلبات الشراء',
                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
                                   ),
-
                                 ],
                               ),
                             ],
@@ -1330,8 +1327,6 @@ class HomeScreenState extends State<HomeGuide>
                       SizedBox(
                         height: 5,
                       ),
-
-
                     ],
                   ),
                 ),
@@ -1343,9 +1338,7 @@ class HomeScreenState extends State<HomeGuide>
     );
   }
 
-
-
-  Container title_card(String title , bool section) {
+  Container title_card(String title, bool section) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 13),
       width: double.infinity,
@@ -1383,9 +1376,7 @@ class HomeScreenState extends State<HomeGuide>
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
-                  section
-                      ? Icons.keyboard_arrow_down
-                      : Icons.keyboard_arrow_up,
+                  section ? Icons.keyboard_arrow_down : Icons.keyboard_arrow_up,
                   color: Colors.black,
                   weight: 8,
                   size: 35,
@@ -1437,12 +1428,10 @@ class HomeScreenState extends State<HomeGuide>
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          CustomText(
-            Constant.appName,
-            fontSize: context.font.large,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-          ),
+          CustomText(Constant.appName,
+              fontSize: context.font.large,
+              fontWeight: FontWeight.bold,
+              color: context.color.mainGold),
           //UiUtils.getSvg(AppIcons.appbarLogo, height: 40, width: 40 ,fit: BoxFit.cover ),
         ]);
   }
@@ -1459,13 +1448,13 @@ class HomeScreenState extends State<HomeGuide>
 
   List<Widget> appbarActionsWidget() {
     return [
-      appbarIconWidget(Icons.favorite_border, () {
-        UiUtils.checkUser(
-            onNotGuest: () {
-              Navigator.pushNamed(context, Routes.favoritesScreen);
-            },
-            context: context);
-      }),
+      // appbarIconWidget(Icons.favorite_border, () {
+      //   UiUtils.checkUser(
+      //       onNotGuest: () {
+      //         Navigator.pushNamed(context, Routes.favoritesScreen);
+      //       },
+      //       context: context);
+      // }),
       appbarIconWidget(Icons.search, () {
         Navigator.pushNamed(context, Routes.searchScreenRoute, arguments: {
           "autoFocus": true,
@@ -1477,6 +1466,9 @@ class HomeScreenState extends State<HomeGuide>
               Navigator.pushNamed(context, Routes.notificationPage);
             },
             context: context);
+      }),
+      appbarIconWidget(Icons.person_2_outlined, () {
+        Navigator.pushNamed(context, Routes.profileScreen);
       }),
     ];
   }
@@ -1515,8 +1507,9 @@ class HomeScreenState extends State<HomeGuide>
   Container custom_card_Item(BuildContext context, String title, String url) {
     return Container(
       child: Container(
+        margin: EdgeInsets.all(5),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(10),
         ),
         clipBehavior: Clip.hardEdge,
         child: Stack(
@@ -1554,172 +1547,169 @@ class HomeScreenState extends State<HomeGuide>
   }
 
   Container the_gold_sec(String title) {
-    bool expand = true ;
+    bool expand = true;
     return Container(
         child: Column(children: [
-          InkWell(
-            onTap: (){
-              if (expand)
-                setState(() {
-                  expand = false;
-                });
-              else
-                setState(() {
-                  expand = true;
-                });
-            },
-            child: Container(
-              margin: EdgeInsets.symmetric(horizontal: 13),
-              width: double.infinity,
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(AppIcons.categoryBg),
-                  fit: BoxFit.fill,
-                ),
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: Row(
-                children: [
-                  Icon(
-                    expand
-                        ? Icons.keyboard_arrow_up
-                        : Icons.keyboard_arrow_down,
-                    color: Colors.black,
-                  ),
-                  Expanded(
-                    child: CustomText(
-                      title,
-                      // item.name ?? "",
-                      textAlign: TextAlign.center,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  Icon(
-                    expand
-                        ? Icons.keyboard_arrow_up
-                        : Icons.keyboard_arrow_down,
-                    color: Colors.black,
-                  ),
-                ],
-              ),
-            ),
-          ),
-          SizedBox(height: 10),
+      InkWell(
+        onTap: () {
           if (expand)
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15),
-              child: Column(
+            setState(() {
+              expand = false;
+            });
+          else
+            setState(() {
+              expand = true;
+            });
+        },
+        child: Container(
+          margin: EdgeInsets.symmetric(horizontal: 13),
+          width: double.infinity,
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(AppIcons.categoryBg),
+              fit: BoxFit.fill,
+            ),
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Row(
+            children: [
+              Icon(
+                expand ? Icons.keyboard_arrow_up : Icons.keyboard_arrow_down,
+                color: Colors.black,
+              ),
+              Expanded(
+                child: CustomText(
+                  title,
+                  // item.name ?? "",
+                  textAlign: TextAlign.center,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              Icon(
+                expand ? Icons.keyboard_arrow_up : Icons.keyboard_arrow_down,
+                color: Colors.black,
+              ),
+            ],
+          ),
+        ),
+      ),
+      SizedBox(height: 10),
+      if (expand)
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 15),
+          child: Column(
+            children: [
+              GridView.count(
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                crossAxisCount: 3,
+                mainAxisSpacing: 8,
+                crossAxisSpacing: 8,
                 children: [
-                  GridView.count(
-                    shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
-                    crossAxisCount: 3,
-                    mainAxisSpacing: 8,
-                    crossAxisSpacing: 8,
-                    children: [
-                      // The Card
-                      InkWell(
-                        onTap: () {
-                          Navigator.pushNamed(context, Routes.guide);
-                        },
-                        child: GoldShimmerCard(
-                            title: 'المسجل التجاري',
-                            url:
+                  // The Card
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, Routes.guide);
+                    },
+                    child: custom_card_Item(
+                      context,
+                        'المسجل التجاري',
                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/23dwc45aegqv/8_copy.jpg'),
-                      ),
-                      InkWell(
-                        onTap: () {
-                          Navigator.pushNamed(context, Routes.guide);
-                        },
-                        child: GoldShimmerCard(
-                            title: ' وزارة الإستثمار ',
-                            url:
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, Routes.guide);
+                    },
+                    child: custom_card_Item(
+                      context ,
+                      ' وزارة الإستثمار ',
+
                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/8iy777zlezzx/9_copy.jpg'),
-                      ),
-                      InkWell(
-                        onTap: () {
-                          Navigator.pushNamed(context, Routes.guide);
-                        },
-                        child: GoldShimmerCard(
-                            title: '   وزارة المعادن ',
-                            url:
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, Routes.guide);
+                    },
+                    child: custom_card_Item(
+                      context,
+                       '   وزارة المعادن ',
                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/kqgp4p9tgsdw/10_copy.jpg'),
-                      ),
+                  ),
 
-                      InkWell(
-                        onTap: () {
-                          Navigator.pushNamed(context, Routes.guide);
-                        },
-                        child: custom_card_Item(context, ' الابحاث الجيلوجية ',
-                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/fu508h0w64cp/11_copy.jpg'),
-                      ),
-                      InkWell(
-                        onTap: () {
-                          Navigator.pushNamed(context, Routes.guide);
-                        },
-                        child: custom_card_Item(context, ' الولايات والمحاليات  ',
-                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
-                      ),
-                      InkWell(
-                        onTap: () {
-                          Navigator.pushNamed(context, Routes.guide);
-                        },
-                        child: custom_card_Item(
-                            context,
-                            ' المالية والتخطيط الأقتصادي  ',
-                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/mina24dtpbp3/13_copy.jpg'),
-                      ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, Routes.guide);
+                    },
+                    child: custom_card_Item(context, ' الابحاث الجيلوجية ',
+                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/fu508h0w64cp/11_copy.jpg'),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, Routes.guide);
+                    },
+                    child: custom_card_Item(context, ' الولايات والمحاليات  ',
+                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, Routes.guide);
+                    },
+                    child: custom_card_Item(
+                        context,
+                        ' المالية والتخطيط الأقتصادي  ',
+                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/mina24dtpbp3/13_copy.jpg'),
+                  ),
 
-                      InkWell(
-                        onTap: () {
-                          Navigator.pushNamed(context, Routes.guide);
-                        },
-                        child: custom_card_Item(context, ' هيئة الجمارك ',
-                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/pxyx3p1md655/14_copy.jpg'),
-                      ),
-                      InkWell(
-                        onTap: () {
-                          Navigator.pushNamed(context, Routes.guide);
-                        },
-                        child: custom_card_Item(context, ' وزارة التجارة ',
-                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/vq8ys7favedu/15_copy.jpg'),
-                      ),
-                      InkWell(
-                        onTap: () {
-                          Navigator.pushNamed(context, Routes.guide);
-                        },
-                        child: custom_card_Item(context, ' مكتب العمل ',
-                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/a5ozl80fvqk4/16_copy.jpg'),
-                      ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, Routes.guide);
+                    },
+                    child: custom_card_Item(context, ' هيئة الجمارك ',
+                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/pxyx3p1md655/14_copy.jpg'),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, Routes.guide);
+                    },
+                    child: custom_card_Item(context, ' وزارة التجارة ',
+                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/vq8ys7favedu/15_copy.jpg'),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, Routes.guide);
+                    },
+                    child: custom_card_Item(context, ' مكتب العمل ',
+                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/a5ozl80fvqk4/16_copy.jpg'),
+                  ),
 
-                      InkWell(
-                        onTap: () {
-                          Navigator.pushNamed(context, Routes.guide);
-                        },
-                        child: custom_card_Item(context, 'وزارة العدل ',
-                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/aqm2fk2oi1cm/17_copy.jpg'),
-                      ),
-                      InkWell(
-                        onTap: () {
-                          Navigator.pushNamed(context, Routes.guide);
-                        },
-                        child: custom_card_Item(context, ' التأمينات الإجتماعية ',
-                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/6iqubtvxmlic/18_copy.jpg'),
-                      ),
-                      InkWell(
-                        onTap: () {
-                          Navigator.pushNamed(context, Routes.guide);
-                        },
-                        child: custom_card_Item(context, ' شركات التأمين ',
-                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/80k6u2xj7rn9/19_copy.jpg'),
-                      ),
-                    ],
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, Routes.guide);
+                    },
+                    child: custom_card_Item(context, 'وزارة العدل ',
+                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/aqm2fk2oi1cm/17_copy.jpg'),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, Routes.guide);
+                    },
+                    child: custom_card_Item(context, ' التأمينات الإجتماعية ',
+                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/6iqubtvxmlic/18_copy.jpg'),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, Routes.guide);
+                    },
+                    child: custom_card_Item(context, ' شركات التأمين ',
+                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/80k6u2xj7rn9/19_copy.jpg'),
                   ),
                 ],
               ),
-            ),
-        ]));
+            ],
+          ),
+        ),
+    ]));
   }
 }
 
@@ -1808,7 +1798,7 @@ class _GoldSectionState extends State<GoldSection> {
                         child: GoldShimmerCard(
                           title: 'المسجل التجاري',
                           url:
-                          'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/23dwc45aegqv/8_copy.jpg',
+                              'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/23dwc45aegqv/8_copy.jpg',
                         ),
                       ),
                       // باقي العناصر كما هي...
@@ -1823,4 +1813,3 @@ class _GoldSectionState extends State<GoldSection> {
     );
   }
 }
-

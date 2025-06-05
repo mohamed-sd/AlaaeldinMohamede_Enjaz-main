@@ -288,8 +288,8 @@ class HomeScreenState extends State<HomeScreen>
                   child: appbarTitleWidget()),
             ],
           ),
-          backgroundColor: context.color.mainGold,
-          foregroundColor: Colors.black,
+          backgroundColor: context.color.mainBrown,
+          foregroundColor: context.color.mainGold,
           // backgroundColor: const Color.fromARGB(0, 0, 0, 0),
           actions: appbarActionsWidget(),
         ),
@@ -362,7 +362,7 @@ class HomeScreenState extends State<HomeScreen>
             Constant.appName,
             fontSize: context.font.large,
             fontWeight: FontWeight.bold,
-            color: Colors.black,
+            color: context.color.mainGold
           ),
           //UiUtils.getSvg(AppIcons.appbarLogo, height: 40, width: 40 ,fit: BoxFit.cover ),
         ]);
