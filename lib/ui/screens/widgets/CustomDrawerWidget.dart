@@ -91,10 +91,16 @@ class CustomDrawerWidget extends StatelessWidget {
                                       BorderRadiusDirectional.circular(18)),
                               child: CircleAvatar(
                                   radius: 0,
-                                  child: Image.asset('assets/profile.jpg',width: 70 , height: 100,)),
+                                  child: Image.asset(
+                                    'assets/profile.jpg',
+                                    width: 70,
+                                    height: 100,
+                                  )),
                             )),
                       ),
-                      SizedBox(width: 10,),
+                      SizedBox(
+                        width: 10,
+                      ),
                       Expanded(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -128,9 +134,11 @@ class CustomDrawerWidget extends StatelessWidget {
                                             ),
                                     ),
                                   ),
-                                  Text('المدير الإبداعى',style: TextStyle(
-                                    fontWeight: FontWeight.w700
-                                  ),),
+                                  Text(
+                                    'المدير الإبداعى',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.w700),
+                                  ),
                                   Align(
                                     alignment: AlignmentDirectional(-1, 0),
                                     child: Padding(
@@ -172,17 +180,24 @@ class CustomDrawerWidget extends StatelessWidget {
                   Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
+                      InkWell(
+                        onTap: () {
+                          Navigator.pushNamed(context, Routes.profileScreen);
+                        },
+                        child: DrawerLinkTow(context, 'حسابي', Icons.person),
+                      ),
                       // Links :
                       DrawerLinkTow(context, ' الاداء الشخصي للموظف ',
                           Icons.person_2_sharp),
                       DrawerLinkTow(context, 'من نحن', Icons.info_outline),
-                      DrawerLinkTow(
-                          context, ' العمليات والمعدات ', Icons.fire_truck_outlined),
-                      DrawerLinkTow(
-                          context, ' التحفيز والتنافسية ', Icons.slow_motion_video),
+                      DrawerLinkTow(context, ' العمليات والمعدات ',
+                          Icons.fire_truck_outlined),
+                      DrawerLinkTow(context, ' التحفيز والتنافسية ',
+                          Icons.slow_motion_video),
                       DrawerLinkTow(context, ' تعزيز الولاء التنافسي ',
                           Icons.smart_button),
-                      DrawerLinkTow(context, ' دعم الإبتكار ', Icons.lightbulb_outline_sharp),
+                      DrawerLinkTow(context, ' دعم الإبتكار ',
+                          Icons.lightbulb_outline_sharp),
                     ],
                   ),
 
@@ -269,49 +284,41 @@ class CustomDrawerWidget extends StatelessWidget {
     );
   }
 
-  InkWell DrawerLinkTow(BuildContext context, String title, IconData icon) {
+  Padding DrawerLinkTow(BuildContext context, String title, IconData icon) {
     return // Generated code for this Container Widget...
-        InkWell(
-          onTap: (){
-            Navigator.pushNamed(context, Routes.soon);
-          },
-          child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-                child: InkWell(
-          onTap: () {},
-          child: Container(
-            width: double.infinity,
-            child: Padding(
-              padding: EdgeInsets.all(3),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                    child: Icon(
-                      icon,
-                      color: Colors.black,
-                      size: 20,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(5, 0, 5, 0),
-                    child: Text(
-                      title,
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 15,
-                        letterSpacing: 0.0,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
+        Padding(
+      padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+      child: Container(
+        width: double.infinity,
+        child: Padding(
+          padding: EdgeInsets.all(3),
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                child: Icon(
+                  icon,
+                  color: Colors.black,
+                  size: 20,
                 ),
               ),
-        );
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(5, 0, 5, 0),
+                child: Text(
+                  title,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                    letterSpacing: 0.0,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
