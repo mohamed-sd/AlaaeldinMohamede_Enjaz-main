@@ -257,8 +257,8 @@ class _CategoryWidgetHomeState extends State<CategoryWidgetHome> {
                           children: [
                             Icon(
                               isExpanded
-                                  ? Icons.keyboard_arrow_down
-                                  : Icons.keyboard_arrow_up,
+                                  ? Icons.keyboard_arrow_up
+                                  : Icons.keyboard_arrow_down,
                               color: Colors.black,
                               weight: 8,
                               size: 35,
@@ -275,7 +275,7 @@ class _CategoryWidgetHomeState extends State<CategoryWidgetHome> {
                           children: [
                             CustomText(
                               item.name ?? "",
-                              fontSize: 18,
+                              fontSize: 16,
                               textAlign: TextAlign.right,
                               fontWeight: FontWeight.bold,
                             ),
