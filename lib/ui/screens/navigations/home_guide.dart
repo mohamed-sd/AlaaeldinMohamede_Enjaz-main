@@ -1377,7 +1377,7 @@ class HomeScreenState extends State<HomeGuide>
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
-                  section ? Icons.keyboard_arrow_down : Icons.keyboard_arrow_up,
+                  section ? Icons.keyboard_arrow_up : Icons.keyboard_arrow_down,
                   color: Colors.black,
                   weight: 8,
                   size: 35,
@@ -1394,7 +1394,7 @@ class HomeScreenState extends State<HomeGuide>
               children: [
                 CustomText(
                   title ?? "",
-                  fontSize: 18,
+                  fontSize: 16,
                   textAlign: TextAlign.right,
                   fontWeight: FontWeight.bold,
                 ),
