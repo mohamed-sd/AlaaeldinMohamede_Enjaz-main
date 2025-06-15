@@ -283,11 +283,11 @@ class _CategoryWidgetHomeState extends State<CategoryWidgetHome> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 8),
-                        padding: EdgeInsets.all(5),
+                        // margin: EdgeInsets.only(top: 8),
+                        // padding: EdgeInsets.all(5),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.end,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Align(
                               alignment: AlignmentDirectional(0, 1),
