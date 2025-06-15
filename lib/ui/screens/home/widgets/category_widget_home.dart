@@ -282,23 +282,27 @@ class _CategoryWidgetHomeState extends State<CategoryWidgetHome> {
                           ],
                         ),
                       ),
-                      Column(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Align(
-                            alignment: AlignmentDirectional(0, 1),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(20),
-                              child: Image.asset(
-                                'assets/main.png',
-                                width: 90,
-                                height: 80,
-                                fit: BoxFit.fill,
+                      Container(
+                        margin: EdgeInsets.only(top: 8),
+                        padding: EdgeInsets.all(5),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Align(
+                              alignment: AlignmentDirectional(0, 1),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20),
+                                child: Image.network(
+                                  item.url ?? "",
+                                  width: 75,
+                                  height: 70,
+                                  fit: BoxFit.fill,
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       )
                       // Icon(
                       //   isExpanded

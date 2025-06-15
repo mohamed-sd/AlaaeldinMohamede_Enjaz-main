@@ -300,7 +300,9 @@ class MainActivityState extends State<MainActivity>
           context: context,
           statusBarColor: mainColor,
           brightnessIcon: Brightness.light,
-          brightness: Brightness.light),
+          brightness: Brightness.light,
+          navigationBarColor: context.color.mainBrown
+      ),
       child: PopScope(
         canPop: isBack,
         onPopInvokedWithResult: (didPop, result) {
