@@ -418,8 +418,8 @@ class MainActivityState extends State<MainActivity>
                 buildBottomNavigationbarItem(0, AppIcons.home,
                     AppIcons.homeNavActive, "homeTab".translate(context)),
 
-                buildBottomNavigationbarItem(1, AppIcons.eye,
-                    AppIcons.eye, " اعين "),
+                buildBottomNavigationbarItem(1, AppIcons.listViewIcon,
+                    AppIcons.listViewIcon, " إجراءات الشركة "),
 
                 BlocListener<FetchUserPackageLimitCubit,
                         FetchUserPackageLimitState>(
@@ -480,14 +480,14 @@ class MainActivityState extends State<MainActivity>
 
                 // buildBottomNavigationbarItem(
                 //     2, AppIcons.articles, AppIcons.articles, "  مجتمع إنجاز "),
-                buildBottomNavigationbarItem(2, AppIcons.listViewIcon,
-                    AppIcons.listViewIcon, "إجراءات الشركة"),
+                buildBottomNavigationbarItem(2, AppIcons.articles,
+                    AppIcons.articles, " مجتمع إنجاز"),
 
-                buildBottomNavigationbarItem(
-                    3, AppIcons.articles, AppIcons.articles, "  مجتمع إنجاز "),
+                // buildBottomNavigationbarItem(
+                //     3, AppIcons.articles, AppIcons.articles, "   إنجاز "),
 
-                // buildBottomNavigationbarItem(3, AppIcons.profileNav,
-                //     AppIcons.profileNavActive, "profileTab".translate(context))
+                buildBottomNavigationbarItem(3, AppIcons.profileNav,
+                    AppIcons.profileNavActive, "profileTab".translate(context))
               ]),
         ),
       ),
