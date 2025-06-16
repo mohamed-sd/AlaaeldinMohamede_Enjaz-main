@@ -413,7 +413,7 @@ class HomeScreenState extends State<HomeNews>
                                   InkWell(
                                     onTap: () {
                                       Navigator.pushNamed(
-                                          context, Routes.soon);
+                                          context, Routes.detailes);
                                     },
                                     child: GoldShimmerCard(
                                         title: '  تشغيل المنجم ',

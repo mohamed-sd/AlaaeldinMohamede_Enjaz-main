@@ -1,148 +1,96 @@
-
 import 'package:eClassify/ui/theme/theme.dart';
 import 'package:eClassify/utils/extensions/extensions.dart';
 import 'package:flutter/material.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class Detailes extends StatefulWidget {
   const Detailes({super.key});
-
-  static String routeName = 'privacy_screen';
-  static String routePath = '/privacyScreen';
 
   @override
   State<Detailes> createState() => _PrivacyScreenWidgetState();
 }
 
 class _PrivacyScreenWidgetState extends State<Detailes> {
-
-  //late PrivacyScreenModel _model;
-
-  final scaffoldKey = GlobalKey<ScaffoldState>();
+  YoutubePlayerController? _controller;
 
   @override
   void initState() {
     super.initState();
-    //_model = createModel(context, () => PrivacyScreenModel());
-    // logFirebaseEvent('screen_view',
-    //     parameters: {'screen_name': 'privacy_screen'});
-    // WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+    final videoUrl = "https://www.youtube.com/watch?v=avrkjlAQJR0";
+    final videoId = YoutubePlayer.convertUrlToId(videoUrl);
+
+    if (videoId != null) {
+      _controller = YoutubePlayerController(
+        initialVideoId: videoId,
+        flags: const YoutubePlayerFlags(
+          autoPlay: false,
+          mute: false,
+        ),
+      );
+    } else {
+      debugPrint("❌ فشل استخراج videoId من الرابط.");
+    }
   }
 
   @override
   void dispose() {
-    //_model.dispose();
+    _controller?.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        FocusScope.of(context).unfocus();
-        FocusManager.instance.primaryFocus?.unfocus();
-      },
-      child: Scaffold(
-        key: scaffoldKey,
-        backgroundColor: context.color.mainGold,
-        appBar: AppBar(
-          backgroundColor: context.color.mainGold,
-          automaticallyImplyLeading: false,
-          title: Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.end,
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("ارشادات تشغيل المنجم"),
+        backgroundColor: context.color.mainBrown,
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                width: 60,
-                height: 40,
-                decoration: BoxDecoration(
-                  color: context.color.mainBrown,
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: InkWell(
-                  splashColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  hoverColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  child: Icon(
-                    Icons.arrow_back,
-                    color: Colors.white,
-                    size: 24,
-                  ),
+              const Text(
+                "تشغيل المنجم: دليل شامل",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
-            ],
-          ),
-          actions: [],
-          centerTitle: false,
-          elevation: 2,
-        ),
-        body: SafeArea(
-          top: true,
-          child: Container(
-            width: double.infinity,
-            height: double.infinity,
-            decoration: BoxDecoration(),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Expanded(
-                  child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(15, 10, 10, 10),
-                    child: Material(
-                      color: Colors.transparent,
-                      elevation: 5,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Container(
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color:Colors.white,
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        child: Padding(
-                          padding:
-                          EdgeInsetsDirectional.fromSTEB(10, 0, 10, 20),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                                Container(
-                                  width: double.infinity,
-                                  padding: EdgeInsets.symmetric(horizontal: 20 , vertical: 10),
-                                  margin: EdgeInsets.only(top: 20, right: 20 , left: 20),
-                                  decoration:BoxDecoration(
-                                    color: context.color.mainGold,
-                                    borderRadius: BorderRadiusDirectional.circular(15)
-                                  ),
-                                  child: Text('اجراءات رخصة البحث العامة',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w700
-                                  ),),
-                                ),
-                                Container(
-                                width: double.infinity,
-                                padding: EdgeInsets.symmetric(horizontal: 20 , vertical: 5),
-                                margin: EdgeInsets.symmetric(vertical: 20),
-                                decoration:BoxDecoration(
-                                    borderRadius: BorderRadiusDirectional.circular(15)
-                                ),
-                                child: Text('اجراءات رخصة البحث العامة',
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w700
-                                  ),),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+              const SizedBox(height: 12),
+              const Text(
+                '''تشغيل المنجم هو عملية معقدة تتطلب تخطيطاً دقيقاً وتطبيقاً صارماً لإجراءات السلامة والصحة المهنية، فضلاً عن إدارة فعالة للموارد البشرية والتقنية. تبدأ العملية بدراسة جيولوجية تفصيلية لتحديد مواقع الخام وعمقه ونوعه. بعد ذلك، يتم وضع خطة استخراج تتضمن اختيار الأسلوب الأنسب سواء بالحفر السطحي أو العميق.
+
+في البداية، يتم تجهيز الموقع بفتح الطرق وتأمين المداخل والمخارج، وتوفير البنية التحتية الأساسية مثل الكهرباء والمياه والاتصالات. يجب تدريب العاملين على استخدام المعدات الثقيلة مثل الحفارات والناقلات والكسارات بطريقة آمنة وفعالة. كما تُجرى اختبارات دورية على جودة الهواء ومستوى الغبار داخل المنجم لضمان بيئة عمل آمنة.
+
+تشمل العملية كذلك استخدام تقنيات حديثة مثل أجهزة الاستشعار والطائرات بدون طيار لمراقبة الإنتاج وكفاءة العمل. ويعدّ التحكم في المياه الجوفية وتصريفها من أهم التحديات، إذ يجب الحفر بطرق تمنع الانهيارات أو تسرب المياه إلى أماكن غير مرغوب بها.
+
+بجانب ذلك، هناك أهمية كبيرة للرقابة البيئية، حيث يجب اتباع سياسات صارمة للتعامل مع المخلفات وتقليل التأثير البيئي للعملية، بما في ذلك إعادة تأهيل المنطقة بعد انتهاء التعدين.
+
+وأخيراً، يتطلب تشغيل المنجم تنسيقاً يومياً بين الإدارات المختلفة: الإنتاج، الصيانة، الجودة، والسلامة. حيث تعتمد سلامة العمال وكفاءة الإنتاج على هذا التكامل الإداري. إن الاستثمار في التكنولوجيا والتدريب والتخطيط المستدام هو ما يضمن نجاح عمليات تشغيل المناجم على المدى الطويل.
+
+بذلك نرى أن تشغيل المنجم ليس مجرد عملية استخراج معادن، بل هو سلسلة متكاملة من الأنشطة والإجراءات التي تتطلب دقة، التزام، ووعي بيئي ومجتمعي.''',
+                textAlign: TextAlign.justify,
+                style: TextStyle(fontSize: 16, height: 1.6),
+              ),
+              const SizedBox(height: 24),
+              const Text(
+                "فيديو توضيحي:",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
                 ),
-              ],
-            ),
+              ),
+              const SizedBox(height: 12),
+              _controller != null
+                  ? YoutubePlayer(
+                controller: _controller!,
+                showVideoProgressIndicator: true,
+              )
+                  : const Center(child: CircularProgressIndicator()),
+              const SizedBox(height: 20),
+            ],
           ),
         ),
       ),
