@@ -281,12 +281,12 @@ class MainActivityState extends State<MainActivity>
 
   late List<Widget> pages = [
     HomeScreen(from: widget.from),
+    HomeScreen(from: widget.from),
     HomeGuide(),
-    HomeNews(),
     // HomeNews(),
     // ChatListScreen(),
     // ItemsScreen(),
-    const ProfileScreen(),
+    HomeNews(),
   ];
 
   @override
@@ -418,10 +418,10 @@ class MainActivityState extends State<MainActivity>
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
                 buildBottomNavigationbarItem(0, AppIcons.home,
-                    AppIcons.homeNavActive, "homeTab".translate(context)),
+                    AppIcons.homeNavActive, "  الإعلانات "),
 
-                buildBottomNavigationbarItem(1, AppIcons.listViewIcon,
-                    AppIcons.listViewIcon, " إجراءات الشركة "),
+                buildBottomNavigationbarItem(1, AppIcons.eye,
+                    AppIcons.eye, "  تتبع أعين "),
 
                 BlocListener<FetchUserPackageLimitCubit,
                         FetchUserPackageLimitState>(
@@ -482,14 +482,14 @@ class MainActivityState extends State<MainActivity>
 
                 // buildBottomNavigationbarItem(
                 //     2, AppIcons.articles, AppIcons.articles, "  مجتمع إنجاز "),
-                buildBottomNavigationbarItem(2, AppIcons.articles,
-                    AppIcons.articles, " مجتمع إنجاز"),
+                buildBottomNavigationbarItem(2, AppIcons.listViewIcon,
+                    AppIcons.listViewIcon, " إجراءات الشركة "),
 
                 // buildBottomNavigationbarItem(
                 //     3, AppIcons.articles, AppIcons.articles, "   إنجاز "),
 
-                buildBottomNavigationbarItem(3, AppIcons.profileNav,
-                    AppIcons.profileNavActive, "profileTab".translate(context))
+                buildBottomNavigationbarItem(3, AppIcons.articles,
+                    AppIcons.articles, " مجتمع إنجاز")
               ]),
         ),
       ),
