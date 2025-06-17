@@ -1,19 +1,24 @@
 import 'package:eClassify/app/routes.dart';
+import 'package:eClassify/ui/screens/guide/detailes.dart';
 import 'package:eClassify/ui/theme/theme.dart';
 import 'package:eClassify/utils/extensions/extensions.dart';
 import 'package:flutter/material.dart';
 
 class Mining_minestry extends StatelessWidget {
   final String title;
-  const Mining_minestry({Key? key , required this.title}) : super(key: key);
+  final String flag ;
+  const Mining_minestry({Key? key , required this.title , required this.flag }) : super(key: key);
 
   /// هذا هو الراوت الذي تستدعيه من راوتر خارجي
   static Route<dynamic> route(RouteSettings settings) {
-    // استخراج البيانات من settings.arguments
-    final args = settings.arguments as String;
+    final args = settings.arguments as Map<String, String>;
+
     return MaterialPageRoute(
-      builder: (_) => Mining_minestry(title: args),
-      settings: settings, // اختياري، لكن مفيد إذا كنت تستخدم analytics أو Navigator 2.0
+      builder: (_) => Mining_minestry(
+        title: args['title'] ?? '',
+        flag: args['flag'] ?? '',
+      ),
+      settings: settings,
     );
   }
 
@@ -83,8 +88,8 @@ class Mining_minestry extends StatelessWidget {
                               alignment: AlignmentDirectional(0, 0),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(8),
-                                child: Image.asset(
-                                  'assets/guid.jpg',
+                                child: Image.network(
+                                  'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D8%B7%D9%84%D8%A8%D8%A7%D8%AA.png?alt=media&token=cde6bd1b-f856-4d00-b418-437ea6e9dbd7',
                                   width: 90,
                                   height: 90,
                                   fit: BoxFit.cover,
@@ -112,109 +117,133 @@ class Mining_minestry extends StatelessWidget {
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(15),
                       ),
-                      child: Padding(
-                        padding: EdgeInsets.all(10),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            // the title
-                            the_title(' استقبال وتسجيل طلبات العملاء '),
-                            InkWell(
-                                onTap: () {},
-                                child: light_row( context , 'استقبال الطلبات عبر القنوات المختلفة')),
-                            InkWell(
-                                onTap: () {},
-                                child: Dark_row( context , 'تسجيل بيانات الطلب في نظام إدارة الطلبات')),
-                            InkWell(
-                                onTap: () {},
-                                child: light_row( context , 'إرسال تأكيد أولي للعميل')),
-                            the_title('التحقق من توفر المعدات'),
-                            InkWell(
-                                onTap: () {},
-                                child: light_row( context , 'مراجعة نظام إدارة المعدات للتأكد من مدى توفر المعدات')),
-                            InkWell(
-                                onTap: () {},
-                                child: Dark_row( context , 'التواصل مع فريق الصيانة أو التشغيل عند الحاجة للتأكد من جاهزية المعدة')),
-                            InkWell(
-                                onTap: () {},
-                                child: light_row( context , 'تحديث حالة الطلب بناءً على التوافر')),
-                            the_title('تسعير الخدمات'),
-                            InkWell(
-                                onTap: () {},
-                                child: Dark_row( context , 'جمع بيانات الطلب')),
-                            InkWell(
-                                onTap: () {},
-                                child: light_row( context , 'تحليل التكاليف ')),
-                            InkWell(
-                                onTap: () {},
-                                child: Dark_row( context , 'تحديد السعر النهائي')),
-                            InkWell(
-                                onTap: () {},
-                                child: light_row( context , ' إرسال العرض للعميل ')),
-                            the_title('جدولة المعدات'),
-                            InkWell(
-                                onTap: () {},
-                                child: Dark_row( context , 'إعداد جدول زمني لتخصيص المعدات المطلوبة')),
-                            InkWell(
-                                onTap: () {},
-                                child: light_row( context , 'التحقق من عدم وجود تضارب في الجدولة مع طلبات أخرى ')),
-                            InkWell(
-                                onTap: () {},
-                                child: Dark_row( context , 'التواصل مع العميل لتأكيد الجدول الزمني')),
-                            InkWell(
-                                onTap: () {},
-                                child: light_row( context , 'تحديث نظام إدارة الطلبات بحالة الطلب ')),
-                            the_title('إعداد العقود ومراجعتها'),
-                            InkWell(
-                                onTap: () {},
-                                child: Dark_row( context , 'إعداد مسودة العقد')),
-                            InkWell(
-                                onTap: () {},
-                                child: light_row( context , ' مراجعة العقد داخلياً ')),
-                            InkWell(
-                                onTap: () {},
-                                child: Dark_row( context , 'إرسال العقد للعميل للمراجعة')),
-                            InkWell(
-                                onTap: () {},
-                                child: light_row( context , ' التفاوض على بنود العقد (إذا لزم الأمر) ')),
-                            InkWell(
-                                onTap: () {},
-                                child: Dark_row( context , 'إعداد النسخة النهائية من العقد')),
-                            the_title('توقيع العقود'),
-                            InkWell(
-                                onTap: () {},
-                                child: Dark_row( context , 'تحديد موعد لتوقيع العقد')),
-                            InkWell(
-                                onTap: () {},
-                                child: light_row( context , ' توقيع العقد ')),
-                            InkWell(
-                                onTap: () {},
-                                child: Dark_row( context , 'تسليم نسخة من العقد للعميل')),
-                            InkWell(
-                                onTap: () {},
-                                child: light_row( context , ' تحديث نظام إدارة العقود ')),
-                            the_title('إدارة تعديلات العقود'),
-                            InkWell(
-                                onTap: () {},
-                                child: Dark_row( context , 'استلام طلب التعديل')),
-                            InkWell(
-                                onTap: () {},
-                                child: light_row( context , 'تقييم طلب التعديل ')),
-                            InkWell(
-                                onTap: () {},
-                                child: Dark_row( context , 'الموافقة على التعديل أو رفضه')),
-                            InkWell(
-                                onTap: () {},
-                                child: light_row( context , ' إعداد ملحق التعديل ')),
-                            InkWell(
-                                onTap: () {},
-                                child: Dark_row( context , 'توقيع ملحق التعديل')),
-                            InkWell(
-                                onTap: () {},
-                                child: light_row( context , 'تحديث نظام إدارة العقود')),
-                          ],
+                        child: Padding(
+                          padding: EdgeInsets.all(10),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              if (flag == "1") ...[
+                                the_title('استقبال وتسجيل طلبات العملاء'),
+                                InkWell(
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                        context,
+                                        Routes.detailes,
+                                        arguments: {
+                                          'title': 'تشغيل المنجم',
+                                          'flag': '3',
+                                        },
+                                      );
+                                    },
+                                    child: light_row(context, 'استقبال الطلبات عبر القنوات المختلفة')),
+                                InkWell(
+                                    onTap: () {},
+                                    child: Dark_row(context, 'تسجيل بيانات الطلب في نظام إدارة الطلبات')),
+                                InkWell(
+                                    onTap: () {},
+                                    child: light_row(context, 'إرسال تأكيد أولي للعميل')),
+                              ],
+                              if (flag == "2") ...[
+                                the_title('التحقق من توفر المعدات'),
+                                InkWell(
+                                    onTap: () {},
+                                    child: light_row(context, 'مراجعة نظام إدارة المعدات للتأكد من مدى توفر المعدات')),
+                                InkWell(
+                                    onTap: () {},
+                                    child: Dark_row(context, 'التواصل مع فريق الصيانة أو التشغيل عند الحاجة للتأكد من جاهزية المعدة')),
+                                InkWell(
+                                    onTap: () {},
+                                    child: light_row(context, 'تحديث حالة الطلب بناءً على التوافر')),
+                              ],
+                              if (flag == "3") ...[
+                                the_title('تسعير الخدمات'),
+                                InkWell(
+                                    onTap: () {},
+                                    child: Dark_row(context, 'جمع بيانات الطلب')),
+                                InkWell(
+                                    onTap: () {},
+                                    child: light_row(context, 'تحليل التكاليف')),
+                                InkWell(
+                                    onTap: () {},
+                                    child: Dark_row(context, 'تحديد السعر النهائي')),
+                                InkWell(
+                                    onTap: () {},
+                                    child: light_row(context, 'إرسال العرض للعميل')),
+                              ],
+                              if (flag == "4") ...[
+                                the_title('جدولة المعدات'),
+                                InkWell(
+                                    onTap: () {},
+                                    child: Dark_row(context, 'إعداد جدول زمني لتخصيص المعدات المطلوبة')),
+                                InkWell(
+                                    onTap: () {},
+                                    child: light_row(context, 'التحقق من عدم وجود تضارب في الجدولة مع طلبات أخرى')),
+                                InkWell(
+                                    onTap: () {},
+                                    child: Dark_row(context, 'التواصل مع العميل لتأكيد الجدول الزمني')),
+                                InkWell(
+                                    onTap: () {},
+                                    child: light_row(context, 'تحديث نظام إدارة الطلبات بحالة الطلب')),
+                              ],
+                              if (flag == "5") ...[
+                                the_title('إعداد العقود ومراجعتها'),
+                                InkWell(
+                                    onTap: () {},
+                                    child: Dark_row(context, 'إعداد مسودة العقد')),
+                                InkWell(
+                                    onTap: () {},
+                                    child: light_row(context, 'مراجعة العقد داخلياً')),
+                                InkWell(
+                                    onTap: () {},
+                                    child: Dark_row(context, 'إرسال العقد للعميل للمراجعة')),
+                                InkWell(
+                                    onTap: () {},
+                                    child: light_row(context, 'التفاوض على بنود العقد (إذا لزم الأمر)')),
+                                InkWell(
+                                    onTap: () {},
+                                    child: Dark_row(context, 'إعداد النسخة النهائية من العقد')),
+                              ],
+                              if (flag == "6") ...[
+                                the_title('توقيع العقود'),
+                                InkWell(
+                                    onTap: () {},
+                                    child: Dark_row(context, 'تحديد موعد لتوقيع العقد')),
+                                InkWell(
+                                    onTap: () {},
+                                    child: light_row(context, 'توقيع العقد')),
+                                InkWell(
+                                    onTap: () {},
+                                    child: Dark_row(context, 'تسليم نسخة من العقد للعميل')),
+                                InkWell(
+                                    onTap: () {},
+                                    child: light_row(context, 'تحديث نظام إدارة العقود')),
+                              ],
+                              if (flag == "7") ...[
+                                the_title('إدارة تعديلات العقود'),
+                                InkWell(
+                                    onTap: () {},
+                                    child: Dark_row(context, 'استلام طلب التعديل')),
+                                InkWell(
+                                    onTap: () {},
+                                    child: light_row(context, 'تقييم طلب التعديل')),
+                                InkWell(
+                                    onTap: () {},
+                                    child: Dark_row(context, 'الموافقة على التعديل أو رفضه')),
+                                InkWell(
+                                    onTap: () {},
+                                    child: light_row(context, 'إعداد ملحق التعديل')),
+                                InkWell(
+                                    onTap: () {},
+                                    child: Dark_row(context, 'توقيع ملحق التعديل')),
+                                InkWell(
+                                    onTap: () {},
+                                    child: light_row(context, 'تحديث نظام إدارة العقود')),
+                              ],
+                            ],
+                          ),
                         ),
-                      )),
+
+                      ),
                 ),
               ),
 

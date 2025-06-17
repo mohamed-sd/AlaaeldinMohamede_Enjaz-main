@@ -369,7 +369,11 @@ class HomeScreenState extends State<HomeGuide>
                                       Navigator.pushNamed(
                                         context,
                                         Routes.guide,
-                                        arguments: 'إدارة الطلبات', // هذا هو الـ title
+                                        arguments:
+                                        {
+                                          'title': 'إدارة الطلبات',
+                                          'flag': '1',
+                                        }, // هذا هو الـ title
                                       );
                                     },
                                     child: custom_card_Item(
@@ -382,7 +386,11 @@ class HomeScreenState extends State<HomeGuide>
                                       Navigator.pushNamed(
                                         context,
                                         Routes.guide,
-                                        arguments: 'إدارة الطلبات', // هذا هو الـ title
+                                        arguments:
+                                        {
+                                          'title': 'إدارة الطلبات',
+                                          'flag': '2',
+                                        }, // هذا هو الـ title
                                       );
                                     },
                                     child: custom_card_Item(
@@ -396,7 +404,11 @@ class HomeScreenState extends State<HomeGuide>
                                       Navigator.pushNamed(
                                         context,
                                         Routes.guide,
-                                        arguments: 'إدارة الطلبات', // هذا هو الـ title
+                                        arguments:
+                                        {
+                                          'title': 'إدارة الطلبات',
+                                          'flag': '3',
+                                        },
                                       );
                                     },
                                     child: custom_card_Item(
@@ -409,7 +421,11 @@ class HomeScreenState extends State<HomeGuide>
                                       Navigator.pushNamed(
                                         context,
                                         Routes.guide,
-                                        arguments: 'إدارة الطلبات', // هذا هو الـ title
+                                        arguments:
+                                        {
+                                          'title': 'إدارة الطلبات',
+                                          'flag': '4',
+                                        }, // هذا هو الـ title
                                       );
                                     },
                                     child: custom_card_Item(
@@ -422,7 +438,11 @@ class HomeScreenState extends State<HomeGuide>
                                       Navigator.pushNamed(
                                         context,
                                         Routes.guide,
-                                        arguments: 'إدارة الطلبات', // هذا هو الـ title
+                                        arguments:
+                                        {
+                                          'title': 'إدارة الطلبات',
+                                          'flag': '5',
+                                        }, // هذا هو الـ title
                                       );
                                     },
                                     child: custom_card_Item(
@@ -435,7 +455,11 @@ class HomeScreenState extends State<HomeGuide>
                                       Navigator.pushNamed(
                                         context,
                                         Routes.guide,
-                                        arguments: 'إدارة الطلبات', // هذا هو الـ title
+                                        arguments:
+                                        {
+                                          'title': 'إدارة الطلبات',
+                                          'flag': '6',
+                                        }, // هذا هو الـ title
                                       );
                                     },
                                     child: custom_card_Item(
@@ -448,7 +472,11 @@ class HomeScreenState extends State<HomeGuide>
                                       Navigator.pushNamed(
                                         context,
                                         Routes.guide,
-                                        arguments: 'إدارة الطلبات', // هذا هو الـ title
+                                        arguments:
+                                        {
+                                          'title': 'إدارة الطلبات',
+                                          'flag': '7',
+                                        }, // هذا هو الـ title
                                       );
                                     },
                                     child: custom_card_Item(
