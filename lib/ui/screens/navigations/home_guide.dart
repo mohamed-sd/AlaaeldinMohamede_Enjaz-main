@@ -1419,16 +1419,16 @@ class HomeScreenState extends State<HomeGuide>
           ),
           Column(
             mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Align(
                 alignment: AlignmentDirectional(0, 1),
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(0),
                   child: Image.network(
                     url,
-                    width: 70,
-                    height: 60,
+                    width: 60,
+                    height: 55,
                     fit: BoxFit.fill,
                   ),
                 ),
