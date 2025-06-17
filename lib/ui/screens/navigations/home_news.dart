@@ -953,7 +953,7 @@ class HomeScreenState extends State<HomeNews>
                 alignment: AlignmentDirectional(0, 1),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(0),
-                  child: Image.network(
+                  child: UiUtils.imageType(
                    url,
                     width: 60,
                     height: 55,
