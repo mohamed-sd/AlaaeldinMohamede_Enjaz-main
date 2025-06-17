@@ -1184,7 +1184,7 @@ class HomeScreenState extends State<HomeGuide>
                               section11 = true;
                           });
                         },
-                        child: title_card(' إدارة علاقات العملاء', section11,"https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F%D8%A7%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D8%B9%D9%85%D9%84%D9%8A%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D9%8A%D8%AF%D8%A7%D9%86%D9%8A%D8%A9.png?alt=media&token=34ea721c-0199-4c3c-a9be-e28dd4badd59"),
+                        child: title_card(' إدارة علاقات العملاء', section11,"https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F%D8%A7%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%B9%D9%84%D8%A7%D9%82%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B9%D9%85%D9%84%D8%A7%D8%A1.png?alt=media&token=a091d4c4-069e-4882-ab47-6894621d9314"),
                       ),
                       SizedBox(
                         height: 5,
@@ -1488,7 +1488,7 @@ class HomeScreenState extends State<HomeGuide>
                 alignment: AlignmentDirectional(0, 1),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(0),
-                  child: Image.network(
+                  child: UiUtils.imageType(
                     url,
                     width: 60,
                     height: 55,
