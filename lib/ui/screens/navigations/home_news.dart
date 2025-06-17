@@ -382,7 +382,7 @@ class HomeScreenState extends State<HomeNews>
                             else section1 = true;
                           });
                         },
-                        child: title_card('  إرشاداتي' , section1,""),
+                        child: title_card('  إرشاداتي' , section1,"https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F%D8%A5%D8%B1%D8%B4%D8%A7%D8%AF%D8%A7%D8%AA%D9%8A.png?alt=media&token=3eb93819-37cb-4b53-86d6-299f9b79e4b1"),
                       ),
                       SizedBox(
                         height: 5,
@@ -439,7 +439,7 @@ class HomeScreenState extends State<HomeNews>
                             else section2 = true;
                           });
                         },
-                        child: title_card(' مستلزماتي' , section2,""),
+                        child: title_card(' مستلزماتي' , section2,"https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F%D9%85%D8%B3%D8%AA%D9%84%D8%B2%D9%85%D8%A7%D8%AA%D9%8A.png?alt=media&token=a0faa9ae-2e84-457e-8018-b08ce8f285e3"),
                       ),
                       SizedBox(
                         height: 5,
@@ -503,7 +503,7 @@ class HomeScreenState extends State<HomeNews>
                             else section3 = true;
                           });
                         },
-                        child: title_card('المعرفة والبحوث' , section3,""),
+                        child: title_card('المعرفة والبحوث' , section3,"https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D9%81%D9%87%20%D9%88%D8%A7%D9%84%D8%A8%D8%AD%D9%88%D8%AB.png?alt=media&token=a8ace6bc-04bc-4c44-b5f8-96566442260a"),
                       ),
                       SizedBox(
                         height: 5,
@@ -567,7 +567,7 @@ class HomeScreenState extends State<HomeNews>
                             else section4 = true;
                           });
                         },
-                        child: title_card('الدورات والتأهيل' , section4,""),
+                        child: title_card('الدورات والتأهيل' , section4,"https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%AA%D8%A7%D9%87%D9%8A%D9%84.png?alt=media&token=2d955d94-c8d8-491c-a881-4c7eabbeb074"),
                       ),
                       SizedBox(
                         height: 5,
@@ -631,7 +631,7 @@ class HomeScreenState extends State<HomeNews>
                             else section5 = true;
                           });
                         },
-                        child: title_card('الميديا والبودكاست' , section5,""),
+                        child: title_card('الميديا والبودكاست' , section5,"https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F%D8%A7%D9%84%D9%85%D9%8A%D8%AF%D9%8A%D8%A7%20%D9%88%D8%A7%D9%84%D8%A8%D9%88%D8%AF%D9%83%D8%A7%D8%B3%D8%AA.png?alt=media&token=3e27f99a-769c-46d3-963b-71b114b94aa9"),
                       ),
                       SizedBox(
                         height: 5,
@@ -695,7 +695,7 @@ class HomeScreenState extends State<HomeNews>
                             else section6 = true;
                           });
                         },
-                        child: title_card('المجتمع والمبادرات' , section6,""),
+                        child: title_card('المجتمع والمبادرات' , section6,"https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F%D8%A7%D9%84%D9%85%D8%AC%D8%AA%D9%85%D8%B9%20%D9%88%D8%A7%D9%84%D9%85%D8%A8%D8%A7%D8%AF%D8%B1%D8%A7%D8%AA.png?alt=media&token=a086e4f2-af32-4fe4-9f2e-5d4ac8dd6b9a"),
                       ),
                       SizedBox(
                         height: 5,
