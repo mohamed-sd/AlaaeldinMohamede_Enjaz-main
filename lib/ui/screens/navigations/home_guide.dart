@@ -346,7 +346,7 @@ class HomeScreenState extends State<HomeGuide>
                               section1 = true;
                           });
                         },
-                        child: title_card(' إدارة الطلبات', section1),
+                        child: title_card(' إدارة الطلبات', section1,'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D8%B7%D9%84%D8%A8%D8%A7%D8%AA.png?alt=media&token=cde6bd1b-f856-4d00-b418-437ea6e9dbd7'),
                       ),
                       SizedBox(
                         height: 5,
@@ -412,7 +412,7 @@ class HomeScreenState extends State<HomeGuide>
                               section2 = true;
                           });
                         },
-                        child: title_card(' توقيع عقود الإيجار', section2),
+                        child: title_card(' توقيع عقود الإيجار', section2,"https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F%D8%AA%D9%88%D9%82%D9%8A%D8%B9%20%D8%B9%D9%82%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D9%8A%D8%AC%D8%A7%D8%B1.png?alt=media&token=83b94bf3-c2d2-4f7d-9171-8b7035893a47"),
                       ),
                       SizedBox(
                         height: 5,
@@ -477,7 +477,7 @@ class HomeScreenState extends State<HomeGuide>
                               section3 = true;
                           });
                         },
-                        child: title_card('  تجهيز المعدة وتسليمها', section3),
+                        child: title_card('  تجهيز المعدة وتسليمها', section3,"https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F%D8%AA%D8%AC%D9%87%D9%8A%D8%B2%20%D9%85%D8%B9%D8%AF%20%D9%88%D8%AA%D8%B3%D9%84%D9%8A%D9%85%D9%87%D8%A7.png?alt=media&token=6ab7e53d-6dc2-4b09-aef4-0f35b6374f45"),
                       ),
                       SizedBox(
                         height: 5,
@@ -543,7 +543,7 @@ class HomeScreenState extends State<HomeGuide>
                           });
                         },
                         child:
-                            title_card('  تشغيل المعدات في الموقع', section4),
+                            title_card('  تشغيل المعدات في الموقع', section4,"https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F%D8%AA%D8%B4%D8%BA%D9%8A%D9%84%20%D8%A7%D9%84%D9%85%D8%B9%D8%AF%D8%A7%D8%AA%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9.png?alt=media&token=c878bc32-5137-46c1-a3ea-2ed74f00f12d"),
                       ),
                       SizedBox(
                         height: 5,
@@ -608,7 +608,7 @@ class HomeScreenState extends State<HomeGuide>
                               section5 = true;
                           });
                         },
-                        child: title_card('صيانة المعدات', section5),
+                        child: title_card('صيانة المعدات', section5,"https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F%D8%B5%D9%8A%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%85%D8%B9%D8%AF%D8%A7%D8%AA.png?alt=media&token=9a420a25-4ffe-43ef-8b90-fb66219733f2"),
                       ),
                       SizedBox(
                         height: 5,
@@ -674,7 +674,7 @@ class HomeScreenState extends State<HomeGuide>
                               section6 = true;
                           });
                         },
-                        child: title_card('توفير قطع الغيار', section6),
+                        child: title_card('توفير قطع الغيار', section6,"https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F%D8%AA%D9%88%D9%81%D9%8A%D8%B1%20%D9%82%D8%B7%D8%B9%20%D8%A7%D9%84%D8%BA%D9%8A%D8%A7%D8%B1.png?alt=media&token=9e024c50-e1e5-4e15-961d-0346ba9d5566"),
                       ),
                       SizedBox(
                         height: 5,
@@ -751,7 +751,7 @@ class HomeScreenState extends State<HomeGuide>
                               section7 = true;
                           });
                         },
-                        child: title_card('  النقل والترحيل', section7),
+                        child: title_card('  النقل والترحيل', section7,"https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F%D8%A7%D9%84%D9%86%D9%82%D9%84%20%D9%88%D8%A7%D9%84%D8%AA%D8%B1%D8%AD%D9%8A%D9%84.png?alt=media&token=3ab722e5-3e65-49b4-ac2c-37f073c899c4"),
                       ),
                       SizedBox(
                         height: 5,
@@ -829,7 +829,7 @@ class HomeScreenState extends State<HomeGuide>
                               section8 = true;
                           });
                         },
-                        child: title_card('  آليات التحصيل المالي', section8),
+                        child: title_card('  آليات التحصيل المالي', section8,"https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F%D8%A7%D9%84%D9%8A%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D8%AD%D8%B5%D9%8A%D9%84%20%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A.png?alt=media&token=621a2321-8331-43bf-81f5-e68f5f73ed64"),
                       ),
                       SizedBox(
                         height: 5,
@@ -906,7 +906,7 @@ class HomeScreenState extends State<HomeGuide>
                               section9 = true;
                           });
                         },
-                        child: title_card('  إدارة القوى البشرية', section9),
+                        child: title_card('  إدارة القوى البشرية', section9,"https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F%D8%A7%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D9%82%D9%88%D9%89%20%D8%A7%D9%84%D8%A8%D8%B4%D8%B1%D9%8A%D8%A9.png?alt=media&token=4498c5ec-f3b6-4bea-bfbf-4c72df1ce1d3"),
                       ),
                       SizedBox(
                         height: 5,
@@ -1014,7 +1014,7 @@ class HomeScreenState extends State<HomeGuide>
                           });
                         },
                         child:
-                            title_card(' إدارة العمليات الميدانية', section10),
+                            title_card(' إدارة العمليات الميدانية', section10,"https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F%D8%A7%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D8%B9%D9%85%D9%84%D9%8A%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D9%8A%D8%AF%D8%A7%D9%86%D9%8A%D8%A9.png?alt=media&token=34ea721c-0199-4c3c-a9be-e28dd4badd59"),
                       ),
                       SizedBox(
                         height: 5,
@@ -1121,7 +1121,7 @@ class HomeScreenState extends State<HomeGuide>
                               section11 = true;
                           });
                         },
-                        child: title_card(' إدارة علاقات العملاء', section11),
+                        child: title_card(' إدارة علاقات العملاء', section11,"https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F%D8%A7%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D8%B9%D9%85%D9%84%D9%8A%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D9%8A%D8%AF%D8%A7%D9%86%D9%8A%D8%A9.png?alt=media&token=34ea721c-0199-4c3c-a9be-e28dd4badd59"),
                       ),
                       SizedBox(
                         height: 5,
@@ -1229,7 +1229,7 @@ class HomeScreenState extends State<HomeGuide>
                           });
                         },
                         child: title_card(
-                            '   إدارة المشتروات التشغيلية', section12),
+                            '   إدارة المشتروات التشغيلية', section12,"https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F%D8%A7%D9%84%D9%85%D8%B4%D8%AA%D8%B1%D9%88%D8%A7%D8%AA.png?alt=media&token=057e2cda-8d62-49cf-91e9-7d9339f24c73"),
                       ),
                       SizedBox(
                         height: 5,
@@ -1355,7 +1355,7 @@ class HomeScreenState extends State<HomeGuide>
     );
   }
 
-  Container title_card(String title, bool section) {
+  Container title_card(String title, bool section,String url ) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 13),
       width: double.infinity,
@@ -1425,10 +1425,10 @@ class HomeScreenState extends State<HomeGuide>
                 alignment: AlignmentDirectional(0, 1),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
-                  child: Image.asset(
-                    'assets/main.png',
-                    width: 90,
-                    height: 80,
+                  child: Image.network(
+                    url,
+                    width: 70,
+                    height: 60,
                     fit: BoxFit.fill,
                   ),
                 ),

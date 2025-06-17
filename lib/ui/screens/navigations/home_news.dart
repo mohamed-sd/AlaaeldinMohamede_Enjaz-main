@@ -382,7 +382,7 @@ class HomeScreenState extends State<HomeNews>
                             else section1 = true;
                           });
                         },
-                        child: title_card('  إرشاداتي' , section1),
+                        child: title_card('  إرشاداتي' , section1,""),
                       ),
                       SizedBox(
                         height: 5,
@@ -439,7 +439,7 @@ class HomeScreenState extends State<HomeNews>
                             else section2 = true;
                           });
                         },
-                        child: title_card(' مستلزماتي' , section2),
+                        child: title_card(' مستلزماتي' , section2,""),
                       ),
                       SizedBox(
                         height: 5,
@@ -495,261 +495,261 @@ class HomeScreenState extends State<HomeNews>
                         height: 5,
                       ),
 
-                      // InkWell(
-                      //   onTap: () {
-                      //     setState(() {
-                      //       if(section3)
-                      //         section3 = false;
-                      //       else section3 = true;
-                      //     });
-                      //   },
-                      //   child: title_card('المعرفة والبحوث' , section3),
-                      // ),
-                      // SizedBox(
-                      //   height: 5,
-                      // ),
-                      // if (section3)
-                      //   Padding(
-                      //     padding: EdgeInsets.symmetric(horizontal: 15),
-                      //     child: Column(
-                      //       children: [
-                      //         GridView.count(
-                      //           shrinkWrap: true,
-                      //           physics: NeverScrollableScrollPhysics(),
-                      //           crossAxisCount: 3,
-                      //           mainAxisSpacing: 8,
-                      //           crossAxisSpacing: 8,
-                      //           children: [
-                      //             // The Card
-                      //             InkWell(
-                      //               onTap: () {
-                      //                 Navigator.pushNamed(
-                      //                     context, Routes.soon);
-                      //               },
-                      //               child: GoldShimmerCard(
-                      //                   title: ' المقالات العلمية والتحليلية ',
-                      //                   url:
-                      //                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/68p8l6cu6qxc/2-_%D9%85%D8%AC%D9%84%D8%A9_%D8%A7%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%86.jpg'),
-                      //             ),
-                      //             InkWell(
-                      //               onTap: () {
-                      //                 Navigator.pushNamed(
-                      //                     context, Routes.soon);
-                      //               },
-                      //               child: GoldShimmerCard(
-                      //                   title: ' البحوث والأوراق الأكاديمية ',
-                      //                   url:
-                      //                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/68p8l6cu6qxc/2-_%D9%85%D8%AC%D9%84%D8%A9_%D8%A7%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%86.jpg'),
-                      //             ),
-                      //             InkWell(
-                      //               onTap: () {
-                      //                 Navigator.pushNamed(context, Routes.soon);
-                      //               },
-                      //               child: GoldShimmerCard(
-                      //                   title: ' المواد الدراسية والكتب ',
-                      //                   url: 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/68p8l6cu6qxc/2-_%D9%85%D8%AC%D9%84%D8%A9_%D8%A7%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%86.jpg'),
-                      //             ),
-                      //
-                      //           ],
-                      //         ),
-                      //       ],
-                      //     ),
-                      //   ),
-                      // SizedBox(
-                      //   height: 5,
-                      // ),
-                      //
-                      // InkWell(
-                      //   onTap: () {
-                      //     setState(() {
-                      //       if(section4)
-                      //         section4 = false;
-                      //       else section4 = true;
-                      //     });
-                      //   },
-                      //   child: title_card('الدورات والتأهيل' , section4),
-                      // ),
-                      // SizedBox(
-                      //   height: 5,
-                      // ),
-                      // if (section4)
-                      //   Padding(
-                      //     padding: EdgeInsets.symmetric(horizontal: 15),
-                      //     child: Column(
-                      //       children: [
-                      //         GridView.count(
-                      //           shrinkWrap: true,
-                      //           physics: NeverScrollableScrollPhysics(),
-                      //           crossAxisCount: 3,
-                      //           mainAxisSpacing: 8,
-                      //           crossAxisSpacing: 8,
-                      //           children: [
-                      //             // The Card
-                      //             InkWell(
-                      //               onTap: () {
-                      //                 Navigator.pushNamed(
-                      //                     context, Routes.soon);
-                      //               },
-                      //               child: GoldShimmerCard(
-                      //                   title: 'الدورات التدريبية ',
-                      //                   url:
-                      //                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/lml0fa6t0p56/73_copy.jpg'),
-                      //             ),
-                      //             InkWell(
-                      //               onTap: () {
-                      //                 Navigator.pushNamed(
-                      //                     context, Routes.soon);
-                      //               },
-                      //               child: GoldShimmerCard(
-                      //                   title: ' الندوات وورش العمل ',
-                      //                   url:
-                      //                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/lml0fa6t0p56/73_copy.jpg'),
-                      //             ),
-                      //             InkWell(
-                      //               onTap: () {
-                      //                 Navigator.pushNamed(context, Routes.soon);
-                      //               },
-                      //               child: GoldShimmerCard(
-                      //                   title: ' برامج تطوير المهارات ',
-                      //                   url: 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/lml0fa6t0p56/73_copy.jpg'),
-                      //             ),
-                      //
-                      //           ],
-                      //         ),
-                      //       ],
-                      //     ),
-                      //   ),
-                      // SizedBox(
-                      //   height: 5,
-                      // ),
-                      //
-                      // InkWell(
-                      //   onTap: () {
-                      //     setState(() {
-                      //       if(section5)
-                      //         section5 = false;
-                      //       else section5 = true;
-                      //     });
-                      //   },
-                      //   child: title_card('الميديا والبودكاست' , section5),
-                      // ),
-                      // SizedBox(
-                      //   height: 5,
-                      // ),
-                      // if (section5)
-                      //   Padding(
-                      //     padding: EdgeInsets.symmetric(horizontal: 15),
-                      //     child: Column(
-                      //       children: [
-                      //         GridView.count(
-                      //           shrinkWrap: true,
-                      //           physics: NeverScrollableScrollPhysics(),
-                      //           crossAxisCount: 3,
-                      //           mainAxisSpacing: 8,
-                      //           crossAxisSpacing: 8,
-                      //           children: [
-                      //             // The Card
-                      //             InkWell(
-                      //               onTap: () {
-                      //                 Navigator.pushNamed(
-                      //                     context, Routes.soon);
-                      //               },
-                      //               child: GoldShimmerCard(
-                      //                   title: ' بودكاست التعدين ',
-                      //                   url:
-                      //                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/cchsh9teg1dp/3-_%D9%85%D9%8A%D9%83%D8%B1%D9%88%D9%81%D9%88%D9%86_%D8%A7%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%86.jpg'),
-                      //             ),
-                      //             InkWell(
-                      //               onTap: () {
-                      //                 Navigator.pushNamed(
-                      //                     context, Routes.soon);
-                      //               },
-                      //               child: GoldShimmerCard(
-                      //                   title: ' فيديوهات توعوية وتدريبية ',
-                      //                   url:
-                      //                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/r878vk5z12ae/1-_%D9%82%D9%86%D8%A7%D8%A9_%D8%A7%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%86_(1).jpg'),
-                      //             ),
-                      //             InkWell(
-                      //               onTap: () {
-                      //                 Navigator.pushNamed(context, Routes.guide);
-                      //               },
-                      //               child: GoldShimmerCard(
-                      //                   title: ' جلسات حوارية ومسجلة ',
-                      //                   url: 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/wfn2teddfaml/70_copy.jpg'),
-                      //             ),
-                      //
-                      //           ],
-                      //         ),
-                      //       ],
-                      //     ),
-                      //   ),
-                      // SizedBox(
-                      //   height: 5,
-                      // ),
-                      //
-                      // InkWell(
-                      //   onTap: () {
-                      //     setState(() {
-                      //       if(section6)
-                      //         section6 = false;
-                      //       else section6 = true;
-                      //     });
-                      //   },
-                      //   child: title_card('المجتمع والمبادرات' , section6),
-                      // ),
-                      // SizedBox(
-                      //   height: 5,
-                      // ),
-                      // if (section6)
-                      //   Padding(
-                      //     padding: EdgeInsets.symmetric(horizontal: 15),
-                      //     child: Column(
-                      //       children: [
-                      //         GridView.count(
-                      //           shrinkWrap: true,
-                      //           physics: NeverScrollableScrollPhysics(),
-                      //           crossAxisCount: 3,
-                      //           mainAxisSpacing: 8,
-                      //           crossAxisSpacing: 8,
-                      //           children: [
-                      //             // The Card
-                      //             InkWell(
-                      //               onTap: () {
-                      //                 Navigator.pushNamed(
-                      //                     context, Routes.soon);
-                      //               },
-                      //               child: GoldShimmerCard(
-                      //                   title: 'المبادرات المجتمعية',
-                      //                   url:
-                      //                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/x33ybf804qm1/74.jpg'),
-                      //             ),
-                      //             InkWell(
-                      //               onTap: () {
-                      //                 Navigator.pushNamed(
-                      //                     context, Routes.soon);
-                      //               },
-                      //               child: GoldShimmerCard(
-                      //                   title: 'المسؤولية الاجتماعية',
-                      //                   url:
-                      //                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/x33ybf804qm1/74.jpg'),
-                      //             ),
-                      //             InkWell(
-                      //               onTap: () {
-                      //                 Navigator.pushNamed(context, Routes.soon);
-                      //               },
-                      //               child: GoldShimmerCard(
-                      //                   title: ' المنتديات والنقاشات ',
-                      //                   url: 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/r878vk5z12ae/1-_%D9%82%D9%86%D8%A7%D8%A9_%D8%A7%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%86_(1).jpg'),
-                      //             ),
-                      //
-                      //           ],
-                      //         ),
-                      //       ],
-                      //     ),
-                      //   ),
-                      // SizedBox(
-                      //   height: 5,
-                      // ),
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            if(section3)
+                              section3 = false;
+                            else section3 = true;
+                          });
+                        },
+                        child: title_card('المعرفة والبحوث' , section3,""),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      if (section3)
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 15),
+                          child: Column(
+                            children: [
+                              GridView.count(
+                                shrinkWrap: true,
+                                physics: NeverScrollableScrollPhysics(),
+                                crossAxisCount: 3,
+                                mainAxisSpacing: 8,
+                                crossAxisSpacing: 8,
+                                children: [
+                                  // The Card
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                          context, Routes.soon);
+                                    },
+                                    child: GoldShimmerCard(
+                                        title: ' المقالات العلمية والتحليلية ',
+                                        url:
+                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/68p8l6cu6qxc/2-_%D9%85%D8%AC%D9%84%D8%A9_%D8%A7%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%86.jpg'),
+                                  ),
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                          context, Routes.soon);
+                                    },
+                                    child: GoldShimmerCard(
+                                        title: ' البحوث والأوراق الأكاديمية ',
+                                        url:
+                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/68p8l6cu6qxc/2-_%D9%85%D8%AC%D9%84%D8%A9_%D8%A7%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%86.jpg'),
+                                  ),
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.pushNamed(context, Routes.soon);
+                                    },
+                                    child: GoldShimmerCard(
+                                        title: ' المواد الدراسية والكتب ',
+                                        url: 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/68p8l6cu6qxc/2-_%D9%85%D8%AC%D9%84%D8%A9_%D8%A7%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%86.jpg'),
+                                  ),
+
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      SizedBox(
+                        height: 5,
+                      ),
+
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            if(section4)
+                              section4 = false;
+                            else section4 = true;
+                          });
+                        },
+                        child: title_card('الدورات والتأهيل' , section4,""),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      if (section4)
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 15),
+                          child: Column(
+                            children: [
+                              GridView.count(
+                                shrinkWrap: true,
+                                physics: NeverScrollableScrollPhysics(),
+                                crossAxisCount: 3,
+                                mainAxisSpacing: 8,
+                                crossAxisSpacing: 8,
+                                children: [
+                                  // The Card
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                          context, Routes.soon);
+                                    },
+                                    child: GoldShimmerCard(
+                                        title: 'الدورات التدريبية ',
+                                        url:
+                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/lml0fa6t0p56/73_copy.jpg'),
+                                  ),
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                          context, Routes.soon);
+                                    },
+                                    child: GoldShimmerCard(
+                                        title: ' الندوات وورش العمل ',
+                                        url:
+                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/lml0fa6t0p56/73_copy.jpg'),
+                                  ),
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.pushNamed(context, Routes.soon);
+                                    },
+                                    child: GoldShimmerCard(
+                                        title: ' برامج تطوير المهارات ',
+                                        url: 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/lml0fa6t0p56/73_copy.jpg'),
+                                  ),
+
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      SizedBox(
+                        height: 5,
+                      ),
+
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            if(section5)
+                              section5 = false;
+                            else section5 = true;
+                          });
+                        },
+                        child: title_card('الميديا والبودكاست' , section5,""),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      if (section5)
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 15),
+                          child: Column(
+                            children: [
+                              GridView.count(
+                                shrinkWrap: true,
+                                physics: NeverScrollableScrollPhysics(),
+                                crossAxisCount: 3,
+                                mainAxisSpacing: 8,
+                                crossAxisSpacing: 8,
+                                children: [
+                                  // The Card
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                          context, Routes.soon);
+                                    },
+                                    child: GoldShimmerCard(
+                                        title: ' بودكاست التعدين ',
+                                        url:
+                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/cchsh9teg1dp/3-_%D9%85%D9%8A%D9%83%D8%B1%D9%88%D9%81%D9%88%D9%86_%D8%A7%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%86.jpg'),
+                                  ),
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                          context, Routes.soon);
+                                    },
+                                    child: GoldShimmerCard(
+                                        title: ' فيديوهات توعوية وتدريبية ',
+                                        url:
+                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/r878vk5z12ae/1-_%D9%82%D9%86%D8%A7%D8%A9_%D8%A7%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%86_(1).jpg'),
+                                  ),
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.pushNamed(context, Routes.guide);
+                                    },
+                                    child: GoldShimmerCard(
+                                        title: ' جلسات حوارية ومسجلة ',
+                                        url: 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/wfn2teddfaml/70_copy.jpg'),
+                                  ),
+
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      SizedBox(
+                        height: 5,
+                      ),
+
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            if(section6)
+                              section6 = false;
+                            else section6 = true;
+                          });
+                        },
+                        child: title_card('المجتمع والمبادرات' , section6,""),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      if (section6)
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 15),
+                          child: Column(
+                            children: [
+                              GridView.count(
+                                shrinkWrap: true,
+                                physics: NeverScrollableScrollPhysics(),
+                                crossAxisCount: 3,
+                                mainAxisSpacing: 8,
+                                crossAxisSpacing: 8,
+                                children: [
+                                  // The Card
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                          context, Routes.soon);
+                                    },
+                                    child: GoldShimmerCard(
+                                        title: 'المبادرات المجتمعية',
+                                        url:
+                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/x33ybf804qm1/74.jpg'),
+                                  ),
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                          context, Routes.soon);
+                                    },
+                                    child: GoldShimmerCard(
+                                        title: 'المسؤولية الاجتماعية',
+                                        url:
+                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/x33ybf804qm1/74.jpg'),
+                                  ),
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.pushNamed(context, Routes.soon);
+                                    },
+                                    child: GoldShimmerCard(
+                                        title: ' المنتديات والنقاشات ',
+                                        url: 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/r878vk5z12ae/1-_%D9%82%D9%86%D8%A7%D8%A9_%D8%A7%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%86_(1).jpg'),
+                                  ),
+
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      SizedBox(
+                        height: 5,
+                      ),
 
                     ],
                   ),
@@ -883,7 +883,7 @@ class HomeScreenState extends State<HomeNews>
     );
   }
 
-  Container title_card(String title, bool section) {
+  Container title_card(String title, bool section,String url) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 13),
       width: double.infinity,
@@ -953,8 +953,8 @@ class HomeScreenState extends State<HomeNews>
                 alignment: AlignmentDirectional(0, 1),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
-                  child: Image.asset(
-                    'assets/main.png',
+                  child: Image.network(
+                   url,
                     width: 90,
                     height: 80,
                     fit: BoxFit.fill,
