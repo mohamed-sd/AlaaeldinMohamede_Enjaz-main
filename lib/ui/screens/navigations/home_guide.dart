@@ -346,7 +346,7 @@ class HomeScreenState extends State<HomeGuide>
                               section1 = true;
                           });
                         },
-                        child: title_card(' إدارة الطلبات', section1,'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D8%B7%D9%84%D8%A8%D8%A7%D8%AA.png?alt=media&token=cde6bd1b-f856-4d00-b418-437ea6e9dbd7'),
+                        child: title_card(' إدارة الطلبات والعقودات ', section1,'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D8%B7%D9%84%D8%A8%D8%A7%D8%AA.png?alt=media&token=cde6bd1b-f856-4d00-b418-437ea6e9dbd7'),
                       ),
                       SizedBox(
                         height: 5,
@@ -366,31 +366,94 @@ class HomeScreenState extends State<HomeGuide>
                                   // The Card
                                   InkWell(
                                     onTap: () {
-                                      Navigator.pushNamed(context, Routes.soon);
+                                      Navigator.pushNamed(
+                                        context,
+                                        Routes.guide,
+                                        arguments: 'إدارة الطلبات', // هذا هو الـ title
+                                      );
                                     },
                                     child: custom_card_Item(
                                         context,
-                                        'استقبال الطلبات من العمال ',
+                                        'استقبال وتسجيل طلبات العملاء ',
                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
                                   ),
                                   InkWell(
                                     onTap: () {
-                                      Navigator.pushNamed(context, Routes.soon);
+                                      Navigator.pushNamed(
+                                        context,
+                                        Routes.guide,
+                                        arguments: 'إدارة الطلبات', // هذا هو الـ title
+                                      );
                                     },
                                     child: custom_card_Item(
                                         context,
-                                        'التحقق من توفر المعدات المطلوبة',
+                                        'التحقق من توفر المعدات',
                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
                                   ),
 
                                   InkWell(
                                     onTap: () {
                                       Navigator.pushNamed(
-                                          context, Routes.guide);
+                                        context,
+                                        Routes.guide,
+                                        arguments: 'إدارة الطلبات', // هذا هو الـ title
+                                      );
                                     },
                                     child: custom_card_Item(
                                         context,
-                                        'جدولة المعدات وتأكيد الطلب ',
+                                        'تسعير الخدمات ',
+                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                  ),
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                        context,
+                                        Routes.guide,
+                                        arguments: 'إدارة الطلبات', // هذا هو الـ title
+                                      );
+                                    },
+                                    child: custom_card_Item(
+                                        context,
+                                        ' جدولة المعدات ',
+                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                  ),
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                        context,
+                                        Routes.guide,
+                                        arguments: 'إدارة الطلبات', // هذا هو الـ title
+                                      );
+                                    },
+                                    child: custom_card_Item(
+                                        context,
+                                        ' إعداد العقود ومراجعتها ',
+                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                  ),
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                        context,
+                                        Routes.guide,
+                                        arguments: 'إدارة الطلبات', // هذا هو الـ title
+                                      );
+                                    },
+                                    child: custom_card_Item(
+                                        context,
+                                        ' توقيع العقود ',
+                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                  ),
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                        context,
+                                        Routes.guide,
+                                        arguments: 'إدارة الطلبات', // هذا هو الـ title
+                                      );
+                                    },
+                                    child: custom_card_Item(
+                                        context,
+                                        ' إدارة تعديلات العقود ',
                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
                                   ),
                                 ],

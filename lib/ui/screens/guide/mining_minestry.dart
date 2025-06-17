@@ -4,10 +4,21 @@ import 'package:eClassify/utils/extensions/extensions.dart';
 import 'package:flutter/material.dart';
 
 class Mining_minestry extends StatelessWidget {
-  const Mining_minestry({Key? key}) : super(key: key);
+  final String title;
+  const Mining_minestry({Key? key , required this.title}) : super(key: key);
+
+  /// هذا هو الراوت الذي تستدعيه من راوتر خارجي
+  static Route<dynamic> route(RouteSettings settings) {
+    // استخراج البيانات من settings.arguments
+    final args = settings.arguments as String;
+    return MaterialPageRoute(
+      builder: (_) => Mining_minestry(title: args),
+      settings: settings, // اختياري، لكن مفيد إذا كنت تستخدم analytics أو Navigator 2.0
+    );
+  }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context ) {
     return Scaffold(
       backgroundColor: context.color.mainColor,
       appBar: AppBar(
@@ -29,7 +40,7 @@ class Mining_minestry extends StatelessWidget {
                       color: context.color.mainGold,
                       borderRadius: BorderRadiusDirectional.circular(15)),
                   child: Text(
-                    'وزارة المعادن',
+                    title,
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
                   ),
@@ -107,46 +118,100 @@ class Mining_minestry extends StatelessWidget {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             // the title
-                            the_title('تراخيص التعدين '),
-
-                            // The Light Row
+                            the_title(' استقبال وتسجيل طلبات العملاء '),
                             InkWell(
                                 onTap: () {},
-                                child: light_row( context , 'إجراءات رخصة البحث العامة ')),
+                                child: light_row( context , 'استقبال الطلبات عبر القنوات المختلفة')),
                             InkWell(
                                 onTap: () {},
-                                child: Dark_row( context ,  ' إجراءات رخصة البحث المطلقة ')),
+                                child: Dark_row( context , 'تسجيل بيانات الطلب في نظام إدارة الطلبات')),
                             InkWell(
                                 onTap: () {},
-                                child: light_row( context , ' إجراءات رخصة الإمتياز  ')),
-
-                            the_title(
-                                'عقود التعدين وإستخراج الصخور والمعادن الصناعية'),
-
+                                child: light_row( context , 'إرسال تأكيد أولي للعميل')),
+                            the_title('التحقق من توفر المعدات'),
                             InkWell(
                                 onTap: () {},
-                                child: Dark_row(context ,'مطلوبات عقد التعدين الكبير ')),
-
+                                child: light_row( context , 'مراجعة نظام إدارة المعدات للتأكد من مدى توفر المعدات')),
                             InkWell(
                                 onTap: () {},
-                                child: light_row(context ,  'مطلوبات عقد التعدين الصغير ')),
-
+                                child: Dark_row( context , 'التواصل مع فريق الصيانة أو التشغيل عند الحاجة للتأكد من جاهزية المعدة')),
                             InkWell(
                                 onTap: () {},
-                                child: Dark_row(context ,'مطلوبات عقد التعدين التقليدي ')),
-
+                                child: light_row( context , 'تحديث حالة الطلب بناءً على التوافر')),
+                            the_title('تسعير الخدمات'),
                             InkWell(
                                 onTap: () {},
-                                child: light_row( context , 'مطلوبات عقد المعادن والصخور')),
-
+                                child: Dark_row( context , 'جمع بيانات الطلب')),
                             InkWell(
                                 onTap: () {},
-                                child: Dark_row(context ,'مطلوبات رخصة التعامل في الأحجار الكريمة')),
-
+                                child: light_row( context , 'تحليل التكاليف ')),
                             InkWell(
                                 onTap: () {},
-                                child: light_row( context , 'ضوابط العمل في التعدين النهري')),
-
+                                child: Dark_row( context , 'تحديد السعر النهائي')),
+                            InkWell(
+                                onTap: () {},
+                                child: light_row( context , ' إرسال العرض للعميل ')),
+                            the_title('جدولة المعدات'),
+                            InkWell(
+                                onTap: () {},
+                                child: Dark_row( context , 'إعداد جدول زمني لتخصيص المعدات المطلوبة')),
+                            InkWell(
+                                onTap: () {},
+                                child: light_row( context , 'التحقق من عدم وجود تضارب في الجدولة مع طلبات أخرى ')),
+                            InkWell(
+                                onTap: () {},
+                                child: Dark_row( context , 'التواصل مع العميل لتأكيد الجدول الزمني')),
+                            InkWell(
+                                onTap: () {},
+                                child: light_row( context , 'تحديث نظام إدارة الطلبات بحالة الطلب ')),
+                            the_title('إعداد العقود ومراجعتها'),
+                            InkWell(
+                                onTap: () {},
+                                child: Dark_row( context , 'إعداد مسودة العقد')),
+                            InkWell(
+                                onTap: () {},
+                                child: light_row( context , ' مراجعة العقد داخلياً ')),
+                            InkWell(
+                                onTap: () {},
+                                child: Dark_row( context , 'إرسال العقد للعميل للمراجعة')),
+                            InkWell(
+                                onTap: () {},
+                                child: light_row( context , ' التفاوض على بنود العقد (إذا لزم الأمر) ')),
+                            InkWell(
+                                onTap: () {},
+                                child: Dark_row( context , 'إعداد النسخة النهائية من العقد')),
+                            the_title('توقيع العقود'),
+                            InkWell(
+                                onTap: () {},
+                                child: Dark_row( context , 'تحديد موعد لتوقيع العقد')),
+                            InkWell(
+                                onTap: () {},
+                                child: light_row( context , ' توقيع العقد ')),
+                            InkWell(
+                                onTap: () {},
+                                child: Dark_row( context , 'تسليم نسخة من العقد للعميل')),
+                            InkWell(
+                                onTap: () {},
+                                child: light_row( context , ' تحديث نظام إدارة العقود ')),
+                            the_title('إدارة تعديلات العقود'),
+                            InkWell(
+                                onTap: () {},
+                                child: Dark_row( context , 'استلام طلب التعديل')),
+                            InkWell(
+                                onTap: () {},
+                                child: light_row( context , 'تقييم طلب التعديل ')),
+                            InkWell(
+                                onTap: () {},
+                                child: Dark_row( context , 'الموافقة على التعديل أو رفضه')),
+                            InkWell(
+                                onTap: () {},
+                                child: light_row( context , ' إعداد ملحق التعديل ')),
+                            InkWell(
+                                onTap: () {},
+                                child: Dark_row( context , 'توقيع ملحق التعديل')),
+                            InkWell(
+                                onTap: () {},
+                                child: light_row( context , 'تحديث نظام إدارة العقود')),
                           ],
                         ),
                       )),

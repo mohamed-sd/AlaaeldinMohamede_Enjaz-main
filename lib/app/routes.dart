@@ -213,8 +213,6 @@ class Routes {
         return MaterialPageRoute(builder: ((context) => const ItemsScreen()));
       case chatlist :
         return MaterialPageRoute(builder: ((context) => const ChatListScreen()));
-      case guide :
-        return MaterialPageRoute(builder: ((context) => const Mining_minestry()));
       case welcome :
         return MaterialPageRoute(builder: ((context) => const WelcomeScreen()));
       case splash:
@@ -224,6 +222,8 @@ class Routes {
             builder: ((context) => const OnboardingScreen()));
       case main:
         return MainActivity.route(routeSettings);
+      case guide:
+        return Mining_minestry.route(routeSettings);
       case login:
         return LoginScreen.route(routeSettings);
       case forgotPassword:
