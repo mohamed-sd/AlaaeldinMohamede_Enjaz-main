@@ -1633,8 +1633,17 @@ class HomeScreenState extends State<HomeGuide>
               left: 0,
               right: 0,
               child: Container(
-                color: Colors.black.withValues(alpha: 0.7),
                 padding: EdgeInsets.symmetric(vertical: 6, horizontal: 8),
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Colors.black.withValues(alpha: 0.0),
+                      Colors.black.withValues(alpha: 1), // أسود شبه شفاف في الأسفل
+                    ],
+                  ),
+                ),
                 child: Text(
                   title,
                   style: TextStyle(
