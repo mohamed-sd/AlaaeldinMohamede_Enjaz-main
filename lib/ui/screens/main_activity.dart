@@ -11,6 +11,7 @@ import 'package:eClassify/data/cubits/system/fetch_system_settings_cubit.dart';
 import 'package:eClassify/data/model/item/item_model.dart';
 import 'package:eClassify/data/model/system_settings_model.dart';
 import 'package:eClassify/ui/screens/chat/chat_list_screen.dart';
+import 'package:eClassify/ui/screens/navigations/eyes.dart';
 import 'package:eClassify/ui/screens/navigations/home_guide.dart';
 import 'package:eClassify/ui/screens/navigations/home_news.dart';
 import 'package:eClassify/ui/screens/navigations/home_screen.dart';
@@ -281,7 +282,7 @@ class MainActivityState extends State<MainActivity>
 
   late List<Widget> pages = [
     HomeScreen(from: widget.from),
-    HomeScreen(from: widget.from),
+    Eyes(),
     HomeGuide(),
     // HomeNews(),
     // ChatListScreen(),
