@@ -379,7 +379,7 @@ class HomeScreenState extends State<HomeGuide>
                                     child: custom_card_Item(
                                         context,
                                         'استقبال وتسجيل طلبات العملاء ',
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                        'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F12-%20%D8%A7%D8%B3%D8%AA%D9%82%D8%A8%D8%A7%D9%84%20%D8%A7%D9%84%D8%B7%D9%84%D8%A8%D8%A7%D8%AA%20%D9%85%D9%86%20%D8%A7%D9%84%D8%B9%D9%85%D9%84%D8%A7%D8%A1.jpeg.jpg?alt=media&token=e8a52bc1-b02c-46a7-8c6d-49095d7258b2'),
                                   ),
                                   InkWell(
                                     onTap: () {
@@ -396,7 +396,7 @@ class HomeScreenState extends State<HomeGuide>
                                     child: custom_card_Item(
                                         context,
                                         'التحقق من توفر المعدات',
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                        'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F13-%20%D8%A7%D9%84%D8%AA%D8%AD%D9%82%D9%82%20%D9%85%D9%86%20%D8%AA%D9%88%D9%81%D8%B1%20%D8%A7%D9%84%D9%85%D8%B9%D8%AF%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D8%B7%D9%84%D9%88%D8%A8%D9%87.jpeg.jpg?alt=media&token=9d0df0fd-3e19-43d2-8ea0-a2433705b72b'),
                                   ),
 
                                   InkWell(
@@ -1624,7 +1624,7 @@ class HomeScreenState extends State<HomeGuide>
           children: [
             Positioned.fill(
               child: UiUtils.imageType(
-                "https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/enjaz-apk7iy/assets/nobgwtm6rjei/12-_%D8%A7%D9%84%D8%B9%D9%82%D9%88%D8%AF%D8%A7%D8%AA_%D8%A7%D9%84%D8%AF%D8%A7%D8%AE%D9%84%D9%8A%D8%A9.jpg",
+               url,
                 fit: BoxFit.cover,
               ),
             ),
