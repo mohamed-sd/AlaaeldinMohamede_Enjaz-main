@@ -150,34 +150,108 @@ class Mining_minestry extends StatelessWidget {
                                     child: Dark_row(context, 'تسجيل بيانات الطلب في نظام إدارة الطلبات')),
                                 InkWell(
                                     onTap: () {
+                                      Navigator.pushNamed(
+                                        context,
+                                        Routes.detailes,
+                                        arguments: {
+                                          'title': 'إرسال تأكيد أولي للعميل',
+                                          'flag': '3',
+                                        },
+                                      );
                                     },
                                     child: light_row(context, 'إرسال تأكيد أولي للعميل')),
                               ],
                               if (flag == "2") ...[
                                 the_title('التحقق من توفر المعدات'),
                                 InkWell(
-                                    onTap: () {},
+                                    onTap: () {
+
+                                      Navigator.pushNamed(
+                                        context,
+                                        Routes.detailes,
+                                        arguments: {
+                                          'title': 'مراجعة نظام إدارة المعدات للتأكد من مدى توفر المعدات',
+                                          'flag': '21',
+                                        },
+                                      );
+                                    },
                                     child: light_row(context, 'مراجعة نظام إدارة المعدات للتأكد من مدى توفر المعدات')),
                                 InkWell(
-                                    onTap: () {},
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                        context,
+                                        Routes.detailes,
+                                        arguments: {
+                                          'title': 'التواصل مع فريق الصيانة أو التشغيل عند الحاجة للتأكد من جاهزية المعدة',
+                                          'flag': '22',
+                                        },
+                                      );
+                                    },
                                     child: Dark_row(context, 'التواصل مع فريق الصيانة أو التشغيل عند الحاجة للتأكد من جاهزية المعدة')),
                                 InkWell(
-                                    onTap: () {},
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                        context,
+                                        Routes.detailes,
+                                        arguments: {
+                                          'title': 'تحديث حالة الطلب بناءً على التوافر',
+                                          'flag': '23',
+                                        },
+                                      );
+                                    },
                                     child: light_row(context, 'تحديث حالة الطلب بناءً على التوافر')),
                               ],
                               if (flag == "3") ...[
                                 the_title('تسعير الخدمات'),
                                 InkWell(
-                                    onTap: () {},
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                        context,
+                                        Routes.detailes,
+                                        arguments: {
+                                          'title': 'جمع بيانات الطلب',
+                                          'flag': '31',
+                                        },
+                                      );
+                                    },
                                     child: Dark_row(context, 'جمع بيانات الطلب')),
                                 InkWell(
-                                    onTap: () {},
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                        context,
+                                        Routes.detailes,
+                                        arguments: {
+                                          'title': 'تحليل التكاليف',
+                                          'flag': '32',
+                                        },
+                                      );
+                                    },
                                     child: light_row(context, 'تحليل التكاليف')),
                                 InkWell(
-                                    onTap: () {},
+                                    onTap: () {
+
+                                      Navigator.pushNamed(
+                                        context,
+                                        Routes.detailes,
+                                        arguments: {
+                                          'title': 'تحديد السعر النهائي',
+                                          'flag': '33',
+                                        },
+                                      );
+                                    },
                                     child: Dark_row(context, 'تحديد السعر النهائي')),
                                 InkWell(
-                                    onTap: () {},
+                                    onTap: () {
+
+                                      Navigator.pushNamed(
+                                        context,
+                                        Routes.detailes,
+                                        arguments: {
+                                          'title': 'إرسال العرض للعميل',
+                                          'flag': '34',
+                                        },
+                                      );
+                                    },
                                     child: light_row(context, 'إرسال العرض للعميل')),
                               ],
                               if (flag == "4") ...[

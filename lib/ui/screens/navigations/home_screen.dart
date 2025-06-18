@@ -357,7 +357,74 @@ class HomeScreenState extends State<HomeScreen>
                     shrinkWrap: true,
                     controller: _scrollController,
                     children: [
+                      Padding(
+                        padding:
+                        const EdgeInsetsDirectional.fromSTEB(30, 0, 20, 0),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0, 15, 0, 5),
+                              child: Text(
+                                'أهلاً بك في إعلانات إنجاز!',
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w600,
+                                    fontFamily: 'IBMPlexArabic'),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0, 5, 3, 0),
+                              child: Text(
+                                'حيث نضع كلما تبحث عنه امام عينيك ،',
+                                textAlign: TextAlign.justify,
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w600,
+                                    fontFamily: 'IBMPlexArabic'),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0, 5, 3, 0),
+                              child: Text(
+                                'لتكون علي خطوة واحدة عن عالم إنجاز.',
+                                textAlign: TextAlign.justify,
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w600,
+                                    fontFamily: 'IBMPlexArabic'),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+
                       SliderWidget(),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      CustomText(
+                        ' إعلانات إنجاز بين يديك',
+                        textAlign: TextAlign.center,
+                        height: 1,
+                        customTextStyle: Theme.of(context)
+                            .textTheme
+                            .bodyLarge!
+                            .copyWith(fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
                       const CategoryWidgetHome(),
                     ],
                   ),

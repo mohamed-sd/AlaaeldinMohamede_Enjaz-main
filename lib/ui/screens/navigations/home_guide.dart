@@ -314,25 +314,73 @@ class HomeScreenState extends State<HomeGuide>
                     shrinkWrap: true,
                     controller: _scrollController,
                     children: [
+                      Padding(
+                        padding:
+                        const EdgeInsetsDirectional.fromSTEB(30, 0, 20, 0),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0, 15, 0, 5),
+                              child: Text(
+                                'أهلاً بك في  إجراءات الشركة!',
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w600,
+                                    fontFamily: 'IBMPlexArabic'),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0, 5, 3, 0),
+                              child: Text(
+                                'حيث نضع كلما تبحث عنه امام عينيك ،',
+                                textAlign: TextAlign.justify,
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w600,
+                                    fontFamily: 'IBMPlexArabic'),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0, 5, 3, 0),
+                              child: Text(
+                                'لتكون علي خطوة واحدة عن عالم إنجاز.',
+                                textAlign: TextAlign.justify,
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w600,
+                                    fontFamily: 'IBMPlexArabic'),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                       SizedBox(
                         height: 10,
                       ),
                       SliderWidget(),
-                      // Container(
-                      //     margin: EdgeInsets.symmetric(horizontal: 10),
-                      //     child: const SliderWidget()),
-                      // SizedBox(
-                      //   height: 10,
-                      // ),
-                      // CustomText(
-                      //   'دليل الاجراءات بين يديك',
-                      //   textAlign: TextAlign.center,
-                      //   height: 1,
-                      //   customTextStyle: Theme.of(context)
-                      //       .textTheme
-                      //       .bodyLarge!
-                      //       .copyWith(fontWeight: FontWeight.bold),
-                      // ),
+                      Container(
+                          margin: EdgeInsets.symmetric(horizontal: 10),
+                          child: const SliderWidget()),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      CustomText(
+                        'دليل الاجراءات بين يديك',
+                        textAlign: TextAlign.center,
+                        height: 1,
+                        customTextStyle: Theme.of(context)
+                            .textTheme
+                            .bodyLarge!
+                            .copyWith(fontWeight: FontWeight.bold),
+                      ),
                       SizedBox(
                         height: 10,
                       ),
@@ -414,7 +462,7 @@ class HomeScreenState extends State<HomeGuide>
                                     child: custom_card_Item(
                                         context,
                                         'تسعير الخدمات ',
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                        'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F14-%20%D8%AA%D8%B3%D8%B9%D9%8A%D8%B1%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA.jpeg.jpg?alt=media&token=d4ecf7e1-fbb8-4052-b99b-b9f830c3499e'),
                                   ),
                                   InkWell(
                                     onTap: () {
@@ -431,7 +479,7 @@ class HomeScreenState extends State<HomeGuide>
                                     child: custom_card_Item(
                                         context,
                                         ' جدولة المعدات ',
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                        'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F15-%20%D8%AC%D8%AF%D9%88%D9%84%D8%A9%20%D8%A7%D9%84%D9%85%D8%B9%D8%AF%D8%A7%D8%AA.jpeg.jpg?alt=media&token=33a7c485-2030-4887-b79d-cba1dc896790'),
                                   ),
                                   InkWell(
                                     onTap: () {
@@ -448,7 +496,7 @@ class HomeScreenState extends State<HomeGuide>
                                     child: custom_card_Item(
                                         context,
                                         ' إعداد العقود ومراجعتها ',
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                        'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F16-%20%D8%A5%D8%B9%D8%AF%D8%A7%D8%AF%20%D8%A7%D9%84%D8%B9%D9%82%D9%88%D8%AF.jpeg.jpg?alt=media&token=3755050c-6567-4994-a60e-c232750832ba'),
                                   ),
                                   InkWell(
                                     onTap: () {
@@ -465,7 +513,7 @@ class HomeScreenState extends State<HomeGuide>
                                     child: custom_card_Item(
                                         context,
                                         ' توقيع العقود ',
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                        'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F17-%20%D8%AA%D9%88%D9%82%D9%8A%D8%B9%20%D8%A7%D9%84%D8%B9%D9%82%D9%88%D8%AF.jpeg.jpg?alt=media&token=71154ce6-8b94-4058-8f5b-e001e857dfe4'),
                                   ),
                                   InkWell(
                                     onTap: () {
@@ -482,7 +530,7 @@ class HomeScreenState extends State<HomeGuide>
                                     child: custom_card_Item(
                                         context,
                                         ' إدارة تعديلات العقود ',
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                        'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F18-%20%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%AA%D8%B9%D8%AF%D9%8A%D9%84%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B9%D9%82%D9%88%D8%AF.jpeg.jpg?alt=media&token=e57da1d3-0811-417a-bbb5-d5a3c477b3c2'),
                                   ),
                                 ],
                               ),
@@ -529,7 +577,7 @@ class HomeScreenState extends State<HomeGuide>
                                     child: custom_card_Item(
                                         context,
                                         ' إعداد نموذج العقد ',
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                        'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F19-%20%D8%A5%D8%B9%D8%AF%D8%A7%D8%AF%20%D9%86%D9%85%D9%88%D8%B0%D8%AC%20%D8%A7%D9%84%D8%B9%D9%82%D8%AF.jpeg.jpg?alt=media&token=0392180c-45e6-4eb1-a251-bd1807b808c3'),
                                   ),
                                   InkWell(
                                     onTap: () {
@@ -538,7 +586,7 @@ class HomeScreenState extends State<HomeGuide>
                                     child: custom_card_Item(
                                         context,
                                         ' مراجعة العقد مع العميل ',
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                        'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F20-%20%D9%85%D8%B1%D8%A7%D8%AC%D8%B9%D8%A9%20%D8%A7%D9%84%D8%B9%D9%82%D8%AF%20%D9%85%D8%B9%20%D8%A7%D9%84%D8%B9%D9%85%D9%8A%D9%84.jpeg.jpg?alt=media&token=3c61fed3-5d40-4318-b340-54362055dd82'),
                                   ),
                                   InkWell(
                                     onTap: () {
@@ -547,7 +595,7 @@ class HomeScreenState extends State<HomeGuide>
                                     child: custom_card_Item(
                                         context,
                                         'توقيع العقد مع العميل ',
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                        'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F21-%20%D8%AA%D9%88%D9%82%D9%8A%D8%B9%20%D8%A7%D9%84%D8%B9%D9%82%D8%AF%20%D9%85%D8%B9%20%D8%A7%D9%84%D8%B9%D9%85%D9%8A%D9%84.jpeg.jpg?alt=media&token=64b4f570-1a17-42d2-be56-8c8c6654ce99'),
                                   ),
                                 ],
                               ),
@@ -594,7 +642,7 @@ class HomeScreenState extends State<HomeGuide>
                                       context,
                                         ' فحص المعدات قبل التسليم ',
 
-                                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/pxyx3p1md655/14_copy.jpg'),
+                                            'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F22-%20%D9%81%D8%AD%D8%B5%20%D8%A7%D9%84%D9%85%D8%B9%D8%AF%D8%A7%D8%AA%20%D9%82%D8%A8%D9%84%20%D8%A7%D9%84%D8%AA%D8%B3%D9%84%D9%8A%D9%85.jpeg.jpg?alt=media&token=4ec24764-21e6-4ffd-b98d-ec4939bf309c'),
                                   ),
                                   InkWell(
                                     onTap: () {
@@ -603,7 +651,7 @@ class HomeScreenState extends State<HomeGuide>
                                     child: custom_card_Item(
                                         context,
                                         '   تعبئة الوقود وتجهيز المعدات ',
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                        'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F23-%20%D8%AA%D8%B9%D8%A8%D8%A6%D8%A9%20%D8%A7%D9%84%D9%88%D9%82%D9%88%D8%AF%20%D9%88%D8%AA%D8%AC%D9%87%D9%8A%D8%B2%20%D8%A7%D9%84%D9%85%D8%B9%D8%AF%D8%A7%D8%AA.jpeg.jpg?alt=media&token=593784f7-bbea-49ca-9c84-616e3258dcf6'),
                                   ),
                                   InkWell(
                                     onTap: () {
@@ -612,7 +660,7 @@ class HomeScreenState extends State<HomeGuide>
                                     child: custom_card_Item(
                                         context,
                                         '  تسليم المعدات وتسجيل حالتها ',
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                        'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F24-%20%D8%AA%D8%B3%D9%84%D9%8A%D9%85%20%D8%A7%D9%84%D9%85%D8%B9%D8%AF%D8%A7%D8%AA.jpeg.jpg?alt=media&token=63b44dce-1807-400b-b1c4-5028981af3a6'),
                                   ),
                                 ],
                               ),
@@ -659,7 +707,7 @@ class HomeScreenState extends State<HomeGuide>
                                     child: custom_card_Item(
                                         context,
                                         '  إرشاد المشغلين علي استلام المعدات ',
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                        'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F25-%20%D8%A5%D8%B1%D8%B4%D8%A7%D8%AF%20%D8%A7%D9%84%D9%85%D8%B4%D8%BA%D9%84%D9%8A%D9%86%20%D8%B9%D9%84%D9%89%20%D8%A7%D8%B3%D8%AA%D9%84%D8%A7%D9%85%20%D8%A7%D9%84%D9%85%D8%B9%D8%AF%D8%A7%D8%AA.jpeg.jpg?alt=media&token=19ae150a-8865-4237-954e-1b560901bb42'),
                                   ),
                                   InkWell(
                                     onTap: () {
@@ -668,7 +716,7 @@ class HomeScreenState extends State<HomeGuide>
                                     child: custom_card_Item(
                                         context,
                                         '   متابعة الأداء اليومي للمعدات ',
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                        'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F26-%20%D9%85%D8%AA%D8%A7%D8%A8%D8%B9%D8%A9%20%D8%A7%D9%84%D8%A7%D8%AF%D8%A7%D8%A1%20%D8%A7%D9%84%D9%8A%D9%88%D9%85%D9%8A.jpeg.jpg?alt=media&token=10e43727-d30c-4825-868b-f6a12df55cc3'),
                                   ),
 
                                   InkWell(
@@ -678,7 +726,7 @@ class HomeScreenState extends State<HomeGuide>
                                     child: custom_card_Item(
                                         context,
                                         '   تسجيل ساعات العمل والإنتاج ',
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                        'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F27-%20%D8%AA%D8%B3%D8%AC%D9%8A%D9%84%20%D8%B9%D8%AF%D8%AF%20%D8%B3%D8%A7%D8%B9%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B9%D9%85%D9%84.jpeg.jpg?alt=media&token=822ae08d-eab7-4514-b8b5-a736191ace23'),
                                   )
                                 ],
                               ),
