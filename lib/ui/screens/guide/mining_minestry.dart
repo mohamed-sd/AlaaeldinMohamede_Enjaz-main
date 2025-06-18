@@ -130,17 +130,27 @@ class Mining_minestry extends StatelessWidget {
                                         context,
                                         Routes.detailes,
                                         arguments: {
-                                          'title': 'تشغيل المنجم',
-                                          'flag': '3',
+                                          'title': 'استقبال الطلبات عبر القنوات المختلفة',
+                                          'flag': '1',
                                         },
                                       );
                                     },
                                     child: light_row(context, 'استقبال الطلبات عبر القنوات المختلفة')),
                                 InkWell(
-                                    onTap: () {},
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                        context,
+                                        Routes.detailes,
+                                        arguments: {
+                                          'title': 'تسجيل بيانات الطلب في نظام إدارة الطلبات',
+                                          'flag': '2',
+                                        },
+                                      );
+                                    },
                                     child: Dark_row(context, 'تسجيل بيانات الطلب في نظام إدارة الطلبات')),
                                 InkWell(
-                                    onTap: () {},
+                                    onTap: () {
+                                    },
                                     child: light_row(context, 'إرسال تأكيد أولي للعميل')),
                               ],
                               if (flag == "2") ...[
@@ -296,11 +306,8 @@ class Mining_minestry extends StatelessWidget {
   Padding light_row( BuildContext context , String title) {
     return Padding(
       padding: EdgeInsets.all(5),
-      child: InkWell(
-        onTap: (){
-            Navigator.pushNamed(context, Routes.detailes);
-        },
-        child: Container(
+        child:
+        Container(
             width: double.infinity,
             decoration: BoxDecoration(
               color: Colors.white,
@@ -349,18 +356,14 @@ class Mining_minestry extends StatelessWidget {
                     ),
                   ],
                 ))),
-      ),
     );
   }
 
   Padding Dark_row(BuildContext context , String title) {
     return Padding(
       padding: EdgeInsets.all(5),
-      child: InkWell(
-        onTap: (){
-          Navigator.pushNamed(context, Routes.detailes);
-        },
-        child: Container(
+        child:
+        Container(
             width: double.infinity,
             decoration: BoxDecoration(
               color: Color.fromARGB(184, 220, 219, 218),
@@ -409,7 +412,6 @@ class Mining_minestry extends StatelessWidget {
                     ),
                   ],
                 ))),
-      ),
     );
   }
 }

@@ -66,9 +66,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Routes {
+  static const detailes = 'detailes';
   static const mine = 'mine';
   static const profileScreen = 'profileScreen';
-  static const detailes = 'detailes';
   static const soon = 'soon';
   static const mining_exchange = 'mining_exchange';
   static const mony_exchange = 'mony_exchange';
@@ -163,6 +163,7 @@ class Routes {
 
     currentRoute = routeSettings.name ?? "";
 
+
     if (routeSettings.name!.contains('/product-details/') ||
         routeSettings.name!.contains('/seller/')) {
       final uri = Uri.parse(routeSettings.name!);
@@ -222,8 +223,6 @@ class Routes {
       case onboarding:
         return CupertinoPageRoute(
             builder: ((context) => const OnboardingScreen()));
-      case Routes.detailes:
-        return Detailes.route(routeSettings);
       case main:
         return MainActivity.route(routeSettings);
       case guide:
@@ -234,8 +233,8 @@ class Routes {
         return ForgotPasswordScreen.route(routeSettings);
       case signup:
         return SignupScreen.route(routeSettings);
-      // case signupMainScreen:
-      //   return SignUpMainScreen.route(routeSettings);
+    // case signupMainScreen:
+    //   return SignUpMainScreen.route(routeSettings);
       case mobileSignUp:
         return MobileSignUpScreen.route(routeSettings);
       case completeProfile:
@@ -339,6 +338,8 @@ class Routes {
         return NearbyLocationScreen.route(routeSettings);
       case myReviewsScreen:
         return MyReviewScreen.route(routeSettings);
+      case detailes :
+        return Detailes.route(routeSettings);
 
       default:
         return CupertinoPageRoute(builder: (context) => const Scaffold());

@@ -1639,7 +1639,7 @@ class HomeScreenState extends State<HomeGuide>
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [
-                      Colors.black.withValues(alpha: 0.0),
+                      Colors.black.withValues(alpha: 0.1),
                       Colors.black.withValues(alpha: 1), // أسود شبه شفاف في الأسفل
                     ],
                   ),

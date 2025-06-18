@@ -1,61 +1,23 @@
 import 'package:eClassify/ui/theme/theme.dart';
 import 'package:eClassify/utils/extensions/extensions.dart';
 import 'package:flutter/material.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-class Detailes extends StatefulWidget {
+class Detailes extends StatelessWidget {
   final String title;
-  final String flag;
+  final String flag ;
+  const Detailes({Key? key , required this.title , required this.flag }) : super(key: key);
 
-  const Detailes({
-    super.key,
-    required this.title,
-    required this.flag,
-  });
-
-  @override
-  State<Detailes> createState() => _PrivacyScreenWidgetState();
-
-  /// الراوت الذي يستقبل Map<String, String> يحتوي على title و flag
+  /// هذا هو الراوت الذي تستدعيه من راوتر خارجي
   static Route<dynamic> route(RouteSettings settings) {
-    final args = settings.arguments;
+    final args = settings.arguments as Map<String, String>;
 
-    if (args is Map<String, String>) {
-      final title = args['title'] ?? 'عنوان غير معروف';
-      final flag = args['flag'] ?? '0';
-
-      return MaterialPageRoute(
-        builder: (_) => Detailes(title: title, flag: flag),
-        settings: settings,
-      );
-    } else {
-      return MaterialPageRoute(
-        builder: (_) => const Detailes(title: 'عنوان غير معروف', flag: '0'),
-        settings: settings,
-      );
-    }
-  }
-}
-
-class _PrivacyScreenWidgetState extends State<Detailes> {
-
-  //late PrivacyScreenModel _model;
-
-  final scaffoldKey = GlobalKey<ScaffoldState>();
-
-  @override
-  void initState() {
-    super.initState();
-    //_model = createModel(context, () => PrivacyScreenModel());
-    // logFirebaseEvent('screen_view',
-    //     parameters: {'screen_name': 'privacy_screen'});
-    // WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
-  }
-
-  @override
-  void dispose() {
-    //_model.dispose();
-    super.dispose();
+    return MaterialPageRoute(
+      builder: (_) => Detailes(
+        title: args['title'] ?? '',
+        flag: args['flag'] ?? '',
+      ),
+      settings: settings,
+    );
   }
 
   @override
@@ -66,7 +28,6 @@ class _PrivacyScreenWidgetState extends State<Detailes> {
         FocusManager.instance.primaryFocus?.unfocus();
       },
       child: Scaffold(
-        key: scaffoldKey,
         backgroundColor: context.color.mainGold,
         appBar: AppBar(
           backgroundColor: context.color.mainGold,
@@ -83,11 +44,12 @@ class _PrivacyScreenWidgetState extends State<Detailes> {
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: InkWell(
+                  onTap: () => Navigator.pop(context),
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
                   hoverColor: Colors.transparent,
                   highlightColor: Colors.transparent,
-                  child: Icon(
+                  child: const Icon(
                     Icons.arrow_back,
                     color: Colors.white,
                     size: 24,
@@ -96,8 +58,6 @@ class _PrivacyScreenWidgetState extends State<Detailes> {
               ),
             ],
           ),
-          actions: [],
-          centerTitle: false,
           elevation: 2,
         ),
         body: SafeArea(
@@ -105,13 +65,12 @@ class _PrivacyScreenWidgetState extends State<Detailes> {
           child: Container(
             width: double.infinity,
             height: double.infinity,
-            decoration: BoxDecoration(),
+            decoration: const BoxDecoration(),
             child: Column(
-              mainAxisSize: MainAxisSize.min,
               children: [
                 Expanded(
                   child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(15, 10, 10, 10),
+                    padding: const EdgeInsetsDirectional.fromSTEB(15, 10, 10, 10),
                     child: Material(
                       color: Colors.transparent,
                       elevation: 5,
@@ -121,43 +80,64 @@ class _PrivacyScreenWidgetState extends State<Detailes> {
                       child: Container(
                         width: double.infinity,
                         decoration: BoxDecoration(
-                          color:Colors.white,
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(15),
                         ),
                         child: Padding(
-                          padding:
-                          EdgeInsetsDirectional.fromSTEB(10, 0, 10, 20),
+                          padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 10, 20),
                           child: Column(
-                            mainAxisSize: MainAxisSize.max,
                             children: [
                               Container(
                                 width: double.infinity,
-                                padding: EdgeInsets.symmetric(horizontal: 20 , vertical: 10),
-                                margin: EdgeInsets.only(top: 20, right: 20 , left: 20),
-                                decoration:BoxDecoration(
-                                    color: context.color.mainGold,
-                                    borderRadius: BorderRadiusDirectional.circular(15)
+                                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                                margin: const EdgeInsets.only(top: 20, right: 20, left: 20),
+                                decoration: BoxDecoration(
+                                  color: context.color.mainGold,
+                                  borderRadius: BorderRadiusDirectional.circular(15),
                                 ),
-                                child : Text('العنوان: ${widget.title}\nالكود: ${widget.flag}'),
-                                // child: Text( '${widget.title}',
-                                //   textAlign: TextAlign.center,
-                                //   style: TextStyle(
-                                //       fontSize: 18,
-                                //       fontWeight: FontWeight.w700
-                                //   ),),
+                                child: Text(title , style: TextStyle(
+                                  fontWeight: FontWeight.w700
+                                ),textAlign: TextAlign.center,),
                               ),
-                              Container(
-                                width: double.infinity,
-                                padding: EdgeInsets.symmetric(horizontal: 20 , vertical: 5),
-                                margin: EdgeInsets.symmetric(vertical: 20),
-                                decoration:BoxDecoration(
-                                    borderRadius: BorderRadiusDirectional.circular(15)
-                                ),
-                                child: Text('اجراءات رخصة البحث العامة',
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w700
-                                  ),),
+                              Column(
+                                children: [
+
+                                  if(flag == "1")...[
+                                  Container(
+                                    width: double.infinity,
+                                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                                    margin: const EdgeInsets.symmetric(vertical: 20),
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadiusDirectional.circular(15),
+                                    ),
+                                    child: const Text(
+                                      'فلاق 1',
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w700,
+                                      ),
+                                    ),
+                                  ),],
+
+                                  if(flag == "2")...[
+                                    Container(
+                                      width: double.infinity,
+                                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                                      margin: const EdgeInsets.symmetric(vertical: 20),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadiusDirectional.circular(15),
+                                      ),
+                                      child: const Text(
+                                        'فلاق 2',
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w700,
+                                        ),
+                                      ),
+                                    ),],
+
+
+                                ],
                               ),
                             ],
                           ),
@@ -174,4 +154,3 @@ class _PrivacyScreenWidgetState extends State<Detailes> {
     );
   }
 }
-
