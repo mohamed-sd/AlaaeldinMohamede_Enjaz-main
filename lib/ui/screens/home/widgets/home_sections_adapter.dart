@@ -247,6 +247,7 @@ class _ItemCardState extends State<ItemCard> {
         });
       },
       child: Container(
+        height: 250,
         width: widget.width ?? 250,
         decoration: BoxDecoration(
             color: Colors.white,
