@@ -772,7 +772,7 @@ class HomeScreenState extends State<HomeGuide>
                                     child: custom_card_Item(
                                         context,
                                         ' إجراء الصيانة الدورية الوقائية ',
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                        'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F28-%20%D8%A5%D8%AC%D8%B1%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B5%D9%8A%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D9%8A%D8%A9.jpeg?alt=media&token=b9320986-4d93-40f0-8af2-16ba4a5e9cdf'),
                                   ),
 
                                   InkWell(
@@ -782,7 +782,7 @@ class HomeScreenState extends State<HomeGuide>
                                     child: custom_card_Item(
                                         context,
                                         '  معالجة الأعطال الطارئة',
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                        'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F29-%20%D9%85%D8%B9%D8%A7%D9%84%D8%AC%D8%A9%20%D8%A7%D9%84%D8%A7%D8%B9%D8%B7%D8%A7%D9%84%20%D8%A7%D9%84%D8%B7%D8%A7%D8%B1%D8%A6%D8%A9.jpeg?alt=media&token=14d55376-be0e-453a-9890-cc62206cf386'),
                                   ),
 
                                   InkWell(
@@ -792,7 +792,7 @@ class HomeScreenState extends State<HomeGuide>
                                     child: custom_card_Item(
                                         context,
                                         ' متابعة حالة المعدات بعد الصيانة',
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                        'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F30-%20%D9%85%D8%AA%D8%A7%D8%A8%D8%B9%D8%A9%20%D8%AD%D8%A7%D9%84%D8%A9%20%D8%A7%D9%84%D8%A2%D9%84%D9%8A%D8%A9.jpeg?alt=media&token=eeb4d0d9-9f1a-4e97-973e-402cbd9fe815'),
                                   ),
                                 ],
                               ),
@@ -838,7 +838,7 @@ class HomeScreenState extends State<HomeGuide>
                                     child: custom_card_Item(
                                         context,
                                         ' تحديد احتياجات قطع الغيار للمعدات',
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                        'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F31-%20%D8%AA%D8%AD%D8%AF%D9%8A%D8%AF%20%D8%A7%D8%AD%D8%AA%D9%8A%D8%A7%D8%AC%D8%A7%D8%AA%20%D9%82%D8%B7%D8%B9%20%D8%A7%D9%84%D8%BA%D9%8A%D8%A7%D8%B1.jpeg?alt=media&token=999fb40d-4922-4b32-bba6-fd146c3331b7'),
                                   ),
 
                                   InkWell(
@@ -848,7 +848,7 @@ class HomeScreenState extends State<HomeGuide>
                                     child: custom_card_Item(
                                         context,
                                         ' طلب قطع الغيار من الموردين ',
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                        'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F32-%20%D8%B7%D9%84%D8%A8%20%D9%82%D8%B7%D8%B9%20%D8%A7%D9%84%D8%BA%D9%8A%D8%A7%D8%B1%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D9%88%D8%B1%D8%AF%D9%8A%D9%86.jpeg?alt=media&token=51170098-c7b2-4448-8bfa-6fceb5a67195'),
                                   ),
 
                                   InkWell(
@@ -858,7 +858,7 @@ class HomeScreenState extends State<HomeGuide>
                                     child: custom_card_Item(
                                         context,
                                         ' استلام وتخزين قطع الغيار ',
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                        'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F33-%20%D8%A7%D8%B3%D8%AA%D9%84%D8%A7%D9%85%20%D9%88%D8%AA%D8%AE%D8%B2%D9%8A%D9%86%20%D9%82%D8%B7%D8%B9%20%D8%A7%D9%84%D8%BA%D9%8A%D8%A7%D8%B1.jpeg?alt=media&token=7a044d53-a762-433a-9130-7868e5065ddd'),
                                   ),
 
                                   InkWell(
@@ -868,7 +868,7 @@ class HomeScreenState extends State<HomeGuide>
                                     child: custom_card_Item(
                                         context,
                                         ' توزيع قطع الغيار علي الفرق الفنية',
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                        'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F34-%20%D8%AA%D9%88%D8%B2%D9%8A%D8%B9%20%D9%82%D8%B7%D8%B9%20%D8%A7%D9%84%D8%BA%D9%8A%D8%A7%D8%B1.jpeg?alt=media&token=85291ded-e161-41a5-a3b7-191d137166c3'),
                                   ),
                                 ],
                               ),
@@ -916,7 +916,7 @@ class HomeScreenState extends State<HomeGuide>
                                     child: custom_card_Item(
                                         context,
                                         ' التخطيط لعملية النقل ',
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                        'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F35-%20%D8%A7%D9%84%D8%AA%D8%AE%D8%B7%D9%8A%D8%B7%20%D9%84%D8%B9%D9%85%D9%84%D9%8A%D8%A9%20%D8%A7%D9%84%D9%86%D9%82%D9%84.jpeg?alt=media&token=54fd3bc0-28d3-4324-9d46-88b394a345cb'),
                                   ),
 
                                   InkWell(
@@ -926,7 +926,7 @@ class HomeScreenState extends State<HomeGuide>
                                     child: custom_card_Item(
                                         context,
                                         '  تجهيز المعدات للنقل ',
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                        'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F36-%20%D8%AA%D8%AC%D9%87%D9%8A%D8%B2%20%D8%A7%D9%84%D9%85%D8%B9%D8%AF%D9%87%20%D9%84%D9%84%D9%86%D9%82%D9%84.jpeg?alt=media&token=94975a52-c6e3-4cce-8d59-3352ed7b71d5'),
                                   ),
 
                                   InkWell(
@@ -936,7 +936,7 @@ class HomeScreenState extends State<HomeGuide>
                                     child: custom_card_Item(
                                         context,
                                         '  نقل المعدات الي الموقع المطلوب',
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                        'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F37-%20%D9%86%D9%82%D9%84%20%D8%A7%D9%84%D9%85%D8%B9%D8%AF%D8%A7%D8%AA.jpeg?alt=media&token=267df85f-0ba0-4fe4-8f58-cda0089c7958'),
                                   ),
 
                                   InkWell(
@@ -946,7 +946,7 @@ class HomeScreenState extends State<HomeGuide>
                                     child: custom_card_Item(
                                         context,
                                         '   تنزيل المعدات في الموقع ',
-                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mining-market-firebase-ym2dfj/assets/irp2v834y4x6/12_copy.jpg'),
+                                        'https://firebasestorage.googleapis.com/v0/b/miningmarket-firebase.appspot.com/o/enjaz%2F38-%20%D8%AA%D9%86%D8%B2%D9%8A%D9%84%20%D8%A7%D9%84%D9%85%D8%B9%D8%AF%D8%A7%D8%AA.jpeg?alt=media&token=e1fafa06-0927-4299-b7c2-240de0a42b2e'),
                                   ),
                                 ],
                               ),

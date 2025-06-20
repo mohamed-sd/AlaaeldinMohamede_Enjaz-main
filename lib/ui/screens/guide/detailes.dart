@@ -68,8 +68,7 @@ class Detailes extends StatelessWidget {
             decoration: const BoxDecoration(),
             child: Column(
               children: [
-                Expanded(
-                  child: Padding(
+                  Padding(
                     padding: const EdgeInsetsDirectional.fromSTEB(15, 10, 10, 10),
                     child: Material(
                       color: Colors.transparent,
@@ -134,7 +133,6 @@ class Detailes extends StatelessWidget {
                       ),
                     ),
                   ),
-                ),
               ],
             ),
           ),
